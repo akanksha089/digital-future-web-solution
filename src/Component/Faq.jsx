@@ -1,5 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
+import ReactHtmlParser from 'html-react-parser';
+
 const FAQSection = () => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -22,131 +24,91 @@ const FAQSection = () => {
 
     fetchData();
   }, []);
+
+
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const handleAccordionClick = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
   return (
     <>
-    
-    <section className="faq-section pt-130 pb-130">
-      <div className="faq-shape">
-        <img src="assets/img/shapes/faq-shape-1.png" alt="shape" />
-      </div>
-      <div className="faq-top-shape"></div>
-      <div className="container">
-        <div className="row gy-lg-0 gy-4">
-          <div className="col-xl-6 col-lg-12 col-md-12">
-            <div className="faq-content">
-              <div className="section-heading">
-                <h4
-                  className="sub-heading after-none"
-                  data-text-animation="fade-in"
-                  data-duration="1.5"
-                >
-                  Just Ask us some question
-                </h4>
-                <h2
-                  className="section-title custom-heading"
-                  data-text-animation
-                  data-split="word"
-                  data-duration="1"
-                >
-                  Digital Solution That Improve Your Agency Growth
-                </h2>
-              </div>
-              <div className="accordion" id="accordionExampleTwo">
-              {data && data.blogs && data.blogs.length > 0 ? (
-                        data.blogs.map((item, index) => (
-                <div key={index} className="accordion-item">
-                  <h2 className="accordion-header custom-heading" id="headingFour">
-                    <button
-                      className="accordion-button"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseFour"
-                      aria-expanded="true"
-                      aria-controls="collapseFour"
-                    >
-                      What kind of services do you offer?
-                    </button>
-                  </h2>
-                  <div
-                    id="collapseFour"
-                    className="accordion-collapse collapse show"
-                    aria-labelledby="headingFour"
-                    data-bs-parent="#accordionExampleTwo"
+
+      <section className="faq-section pt-130 pb-130">
+        <div className="faq-shape">
+          <img src="assets/img/shapes/faq-shape-1.png" alt="shape" />
+        </div>
+        <div className="faq-top-shape"></div>
+        <div className="container">
+          <div className="row gy-lg-0 gy-4">
+            <div className="col-xl-6 col-lg-12 col-md-12">
+              <div className="faq-content">
+                <div className="section-heading">
+                  <h4
+                    className="sub-heading after-none"
+                    data-text-animation="fade-in"
+                    data-duration="1.5"
                   >
-                    <div className="accordion-body">
-                      Risus cum orci sollicitudin fringilla lectus neque rhoncus eget pretium magna, accumsan ante torquent a pellentesque tellus fermentum cursus.
-                    </div>
-                  </div>
+                    Just Ask us some question
+                  </h4>
+                  <h2
+                    className="section-title custom-heading"
+                    data-text-animation
+                    data-split="word"
+                    data-duration="1"
+                  >
+                    Digital Solution That Improve Your Agency Growth
+                  </h2>
                 </div>
-                     ))
-                    ) : "faq not found"}
-                {/* <div className="accordion-item">
-                  <h2 className="accordion-header custom-heading" id="headingFive">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseFive"
-                      aria-expanded="false"
-                      aria-controls="collapseFive"
-                    >
-                      What kind of technology do you use?
-                    </button>
-                  </h2>
-                  <div
-                    id="collapseFive"
-                    className="accordion-collapse collapse"
-                    aria-labelledby="headingFive"
-                    data-bs-parent="#accordionExampleTwo"
-                  >
-                    <div className="accordion-body">
-                      Risus cum orci sollicitudin fringilla lectus neque rhoncus eget pretium magna, accumsan ante torquent a pellentesque tellus fermentum cursus.
-                    </div>
-                  </div>
+                <div className="accordion" id="accordionExampleTwo">
+                  {data && data.blogs && data.blogs.length > 0 ? (
+                    data.blogs.map((item, index) => (
+                      <div key={index} className="accordion-item">
+                        <h2 className="accordion-header custom-heading" id={`heading${index}`}>
+                          <button
+                            className={`accordion-button ${activeIndex === index ? '' : 'collapsed'}`}
+                            type="button"
+                            onClick={() => handleAccordionClick(index)}
+                            aria-expanded={activeIndex === index}
+                            aria-controls={`collapse${index}`}
+                          >
+                            {item && item.question ? item.question : "Question not found"}
+                          </button>
+                        </h2>
+                        <div
+                          id={`collapse${index}`}
+                          className={`accordion-collapse collapse ${activeIndex === index ? 'show' : ''}`}
+                          aria-labelledby={`heading${index}`}
+                          data-bs-parent="#accordionExampleTwo"
+                        >
+                          <div className="accordion-body">
+                            {item && item.answer ? ReactHtmlParser(item.answer) : "Answer not found"}
+                          </div>
+                        </div>
+                      </div>
+                    ))
+                  ) : (
+                    "FAQ not found"
+                  )}
                 </div>
-                <div className="accordion-item">
-                  <h2 className="accordion-header custom-heading" id="headingSix">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseSix"
-                      aria-expanded="false"
-                      aria-controls="collapseSix"
-                    >
-                      How much experience do you have?
-                    </button>
-                  </h2>
-                  <div
-                    id="collapseSix"
-                    className="accordion-collapse collapse"
-                    aria-labelledby="headingSix"
-                    data-bs-parent="#accordionExampleTwo"
-                  >
-                    <div className="accordion-body">
-                      Risus cum orci sollicitudin fringilla lectus neque rhoncus eget pretium magna, accumsan ante torquent a pellentesque tellus fermentum cursus.
-                    </div>
-                  </div>
-                </div> */}
               </div>
             </div>
-          </div>
-          <div className="col-xl-6 col-lg-12 col-md-12">
-            <div className="faq-img reveal text-center">
-              <img src="assets/img/images/faq-img.png" alt="faq" />
+            <div className="col-xl-6 col-lg-12 col-md-12">
+              <div className="faq-img reveal text-center">
+                <img src="assets/img/images/faq-img.png" alt="faq" />
+              </div>
             </div>
           </div>
         </div>
+      </section>
+      <div className="running-text testi">
+        <div className="carouselTicker carouselTicker-nav" data-speed="fast">
+          <ul className="text-anim carouselTicker__list">
+            <li>Customer Testimonial .</li>
+            <li>Client Feedbacks</li>
+          </ul>
+        </div>
       </div>
-    </section>
-    <div className="running-text testi">
-      <div className="carouselTicker carouselTicker-nav" data-speed="fast">
-        <ul className="text-anim carouselTicker__list">
-          <li>Customer Testimonial .</li>
-          <li>Client Feedbacks</li>
-        </ul>
-      </div>
-    </div>
     </>
   );
 };

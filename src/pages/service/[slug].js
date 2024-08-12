@@ -6,6 +6,8 @@ import FooterSection from "../../Component/Footer";
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import ReactHtmlParser from 'html-react-parser';
+import '../custom.css';
+
 
 const ServiceDetails = () => {
 
