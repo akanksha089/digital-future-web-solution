@@ -122,8 +122,8 @@ const ServiceDetails = () => {
                                                 <div className="service-details-content">
                                                     <h2 className="title custom-heading">{data && data.blog && data.blog.title ? data.blog.title :" title not found"}</h2>
                                                     <p className="mb-30">
-                                                    parse{data && data.blog && data.blog.description  ? data.blog.description : 'Description not found'}
-                                                    {/* {data && data.blog && data.blog.description  ? data.blog.description : 'Description not found'} */}
+                                                    {/* parse{data && data.blog && data.blog.description  ? data.blog.description : 'Description not found'} */}
+                                                     {data && data.blog && data.blog.description  ? data.blog.description : 'Description not found'}
                                                     {/* {data && data.blog && data.blog.description  ? parse(data.blog.description) : 'Description not found'} */}
                                                     </p>
                                                 </div>
