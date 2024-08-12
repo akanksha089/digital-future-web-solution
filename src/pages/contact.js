@@ -129,7 +129,7 @@ function contact() {
                                 <div className="col-lg-7">
                                     <div className="blog-contact-form form-2">
                                         <div className="request-form">
-                                            <form onSubmit={handleSubmit}
+                                            <form 
                                                 action="mail.php"
                                                 method="post"
                                                 id="ajax_contact"
@@ -138,25 +138,25 @@ function contact() {
                                                 <div className="form-group row">
                                                     <div className="col-md-6">
                                                         <div className="form-item">
-                                                            <input  value={inputValue}
+                                                            <input 
                                                                 type="text"
                                                                 id="fullname"
                                                                 name="fullname"
                                                                 className="form-control"
                                                                 placeholder="Your Name"
-                                                                onChange={(e) => setInputValue(e.target.value)}
+                                                                
                                                             />
                                                         </div>
                                                     </div>
                                                     <div className="col-md-6">
                                                         <div className="form-item">
-                                                            <input value={inputValue}
+                                                            <input 
                                                                 type="text"
                                                                 id="lastname"
                                                                 name="lastname"
                                                                 className="form-control"
                                                                 placeholder="Last Name"
-                                                                onChange={(e)=> setInputValue(e.target.value)}
+                                                               
                                                             />
                                                         </div>
                                                     </div>
@@ -164,8 +164,7 @@ function contact() {
                                                 <div className="form-group row">
                                                     <div className="col-md-6">
                                                         <div className="form-item">
-                                                            <input value={inputValue}
-                                                            onChange={(e)=> setInputValue(e.target.value)}
+                                                            <input 
                                                                 type="text"
                                                                 id="email"
                                                                 name="email"
@@ -176,13 +175,13 @@ function contact() {
                                                     </div>
                                                     <div className="col-md-6">
                                                         <div className="form-item">
-                                                            <input value={inputValue}
+                                                            <input 
                                                                 type="text"
                                                                 id="phone"
                                                                 name="phone"
                                                                 className="form-control"
                                                                 placeholder="Phone number*"
-                                                                onChange={(e)=> setInputValue(e.target.value)}
+                                                               
                                                             />
                                                         </div>
                                                     </div>
@@ -219,14 +218,14 @@ function contact() {
                                                 <div className="form-group row">
                                                     <div className="col-md-12">
                                                         <div className="form-item message-item">
-                                                            <textarea value={inputValue}
+                                                            <textarea
                                                                 id="message"
                                                                 name="message"
                                                                 cols="30"
                                                                 rows="5"
                                                                 className="form-control address"
                                                                 placeholder="Message"
-                                                                onChange={(e)=> setInputValue(e.target.value)}
+                                                               
                                                             ></textarea>
                                                         </div>
                                                     </div>
