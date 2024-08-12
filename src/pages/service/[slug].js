@@ -3,10 +3,9 @@ import Header from '../../Component/Header';
 import Link from 'next/link';
 import Sidebar from '../../Component/Sidebar';
 import FooterSection from "../../Component/Footer";
-import '../custom.css';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import parse from 'html-react-parser';
+import ReactHtmlParser from 'html-react-parser';
 
 const ServiceDetails = () => {
 
@@ -45,7 +44,6 @@ const ServiceDetails = () => {
                 setLoading(false);
             }
         };
-        console.log("whatisdataaaaaaaaaaaa", data);
         const serviceData = async () => {
             try {
                 const response = await fetch('https://dfweb-v2.onrender.com/api/v1/api-services');
@@ -67,6 +65,10 @@ const ServiceDetails = () => {
 
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error: {error.message}</p>;
+
+    const description = data && data.blog && data.blog.description
+    ? data.blog.description
+    : 'Description not found';
 
     return (
         <div>
@@ -122,9 +124,8 @@ const ServiceDetails = () => {
                                                 <div className="service-details-content">
                                                     <h2 className="title custom-heading">{data && data.blog && data.blog.title ? data.blog.title :" title not found"}</h2>
                                                     <p className="mb-30">
-                                                    {/* parse{data && data.blog && data.blog.description  ? data.blog.description : 'Description not found'} */}
-                                                     {data && data.blog && data.blog.description  ? data.blog.description : 'Description not found'}
-                                                    {/* {data && data.blog && data.blog.description  ? parse(data.blog.description) : 'Description not found'} */}
+                                                    {ReactHtmlParser(description)}
+                                                 
                                                     </p>
                                                 </div>
                                             </div>

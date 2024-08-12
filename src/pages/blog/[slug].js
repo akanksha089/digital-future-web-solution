@@ -3,9 +3,9 @@ import Header from '../../Component/Header';
 import Link from 'next/link';
 import Sidebar from '../../Component/Sidebar';
 import FooterSection from "../../Component/Footer";
-import '../custom.css';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+import ReactHtmlParser from 'html-react-parser';
 
 const BlogDetails = () => {
 
@@ -66,6 +66,10 @@ const BlogDetails = () => {
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error: {error.message}</p>;
 
+    const description = data && data.blog && data.blog.description
+    ? data.blog.description
+    : 'Description not found';
+
     return (
         <div>
             {data ? (
@@ -119,7 +123,7 @@ const BlogDetails = () => {
                                                 </div>
                                                 <div className="service-details-content">
                                                     <h2 className="title custom-heading">{data && data.blog && data.blog.title ? data.blog.title :" title not found"}</h2>
-                                                    <p className="mb-30">{data && data.blog && data.blog.description ? data.blog.description :" description not found"}</p>
+                                                    <p className="mb-30"> {ReactHtmlParser(description)}</p>
                                                 </div>
                                             </div>
                                         </div>
