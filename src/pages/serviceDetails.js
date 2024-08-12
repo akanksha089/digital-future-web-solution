@@ -65,7 +65,7 @@ function ServiceDetails() {
                             </div>
                             <div className="service-details-content">
                                 <h2 className="title custom-heading">Content Management System</h2>
-                                <p className="mb-30">A Content Management System (CMS) is a software application that allows users to create, manage, and modify digital content, such as text, images, videos, and documents, on a website without requiring in-depth technical knowledge. CMS platforms streamline the process of website management, enabling users to focus on content creation and organization rather than coding and programming. Here's a deeper look into CMS:</p>
+                                <p className="mb-30">A Content Management System (CMS) is a software application that allows users to create, manage, and modify digital content, such as text, images, videos, and documents, on a website without requiring in-depth technical knowledge. CMS platforms streamline the process of website management, enabling users to focus on content creation and organization rather than coding and programming. Here a deeper look into CMS:</p>
                                 <div className="service-details-items">
                                     <div className="service-details-item">
                                         <div className="icon">
@@ -114,7 +114,7 @@ function ServiceDetails() {
                                 </div>
                                 <p className="mb-50">A Content Management System (CMS) comprises various components that work together to enable users to create, manage, and publish digital content on the web without the need for advanced technical skills. These components ensure the smooth functioning of the CMS and provide users with the tools they need to effectively manage their online presence.</p>
                                 <h2 className="title custom-heading ">4 Simple Steps to Process</h2>
-                                <p className="mb-40">The process of managing content using a Content Management System (CMS) involves several key steps to ensure effective content creation, organization, and publication. Here's a typical workflow:</p>
+                                <p className="mb-40">The process of managing content using a Content Management System (CMS) involves several key steps to ensure effective content creation, organization, and publication. Here a typical workflow:</p>
                                 <div className="details-box-wrap">
                                     <div className="details-box">
                                         <span className="number">01</span>
