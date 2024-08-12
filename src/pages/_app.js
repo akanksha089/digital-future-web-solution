@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import Script from 'next/script';
 import Head from 'next/head';
+import './custom.css';
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {

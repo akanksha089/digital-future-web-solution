@@ -6,7 +6,7 @@ import FooterSection from "../../Component/Footer";
 import '../custom.css';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-// import parse  from 'react-html-parser';
+import parse from 'html-react-parser';
 
 const ServiceDetails = () => {
 
@@ -122,8 +122,8 @@ const ServiceDetails = () => {
                                                 <div className="service-details-content">
                                                     <h2 className="title custom-heading">{data && data.blog && data.blog.title ? data.blog.title :" title not found"}</h2>
                                                     <p className="mb-30">
-
-                                                    {data && data.blog && data.blog.description  ? data.blog.description : 'Description not found'}
+                                                    parse{data && data.blog && data.blog.description  ? data.blog.description : 'Description not found'}
+                                                    {/* {data && data.blog && data.blog.description  ? data.blog.description : 'Description not found'} */}
                                                     {/* {data && data.blog && data.blog.description  ? parse(data.blog.description) : 'Description not found'} */}
                                                     </p>
                                                 </div>

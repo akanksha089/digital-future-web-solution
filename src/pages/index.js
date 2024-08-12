@@ -9,7 +9,6 @@ import TestimonialSection from "../Component/Testimonial";
 import ProjectSection from "../Component/Project";
 import BlogSection from "../Component/Blog";
 import FooterSection from "../Component/Footer";
-import './custom.css';
 export default function Home() {
     return (
     <>
