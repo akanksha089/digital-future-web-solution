@@ -54,7 +54,7 @@ const FAQSection = () => {
               <div className="accordion" id="accordionExampleTwo">
               {data && data.blogs && data.blogs.length > 0 ? (
                         data.blogs.map((item, index) => (
-                <div className="accordion-item">
+                <div key={index} className="accordion-item">
                   <h2 className="accordion-header custom-heading" id="headingFour">
                     <button
                       className="accordion-button"

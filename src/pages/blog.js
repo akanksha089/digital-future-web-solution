@@ -4,10 +4,10 @@ import Sidebar from '../Component/Sidebar';
 import FooterSection from "../Component/Footer";
 import Link from 'next/link';
 import './custom.css';
-function blog() {
-    const [data, setData] = useState(null);
+function Blog() {
+    const [data, setData] = useState(0);
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+    const [error, setError] = useState(0);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -153,4 +153,4 @@ function blog() {
     )
 }
 
-export default blog
+export default Blog

@@ -104,7 +104,7 @@ const ServiceDetails = () => {
                                     <div className="page-header-content text-center">
                                         <h1 className="title text-white">{data && data.blog && data.blog.title ? data.blog.title :" Service not found"}</h1>
                                         <h4 className="sub-title">
-                                            <a className="home" href="/index">Home</a>
+                                            <Link className="home" href="/index">Home</Link>
                                             <Link className="home" href="/service">Service</Link>
                                             <Link className="inner-page custom-heading" href={`/service/${data.blog.slug}`}>{data && data.blog && data.blog.title ? data.blog.title :"Service not found"}</Link>
                                         </h4>

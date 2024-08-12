@@ -30,7 +30,7 @@ const TestimonialSection = () => {
                     <div class="swiper-wrapper">
                     {data && data.blogs && data.blogs.length > 0 ? (
                         data.blogs.map((item, index) => (
-                        <div class="swiper-slide">
+                        <div key={index} class="swiper-slide">
                             <div class="testi-item text-center">
                                 <div class="testi-thumb">
                                     <img src={item.image} alt="img"/>

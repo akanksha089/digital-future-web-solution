@@ -41,7 +41,7 @@ const BlogSection = () => {
             {
               data && data.blogs && data.blogs.length > 0 ? (
                 data.blogs.map((item, index) => (
-                  <div className="post-card-wrap fade-top">
+                  <div key={index} className="post-card-wrap fade-top">
                     <div className="post-card">
                       <div className="post-thumb">
                         <img src={item.image} alt="post" />

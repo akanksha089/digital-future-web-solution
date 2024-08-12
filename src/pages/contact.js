@@ -1,39 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Header from '../Component/Header';
 import Sidebar from '../Component/Sidebar';
 import FooterSection from "../Component/Footer";
 import './custom.css';
 function contact() {
-    const [data, setData] = useState(null);
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState(null);
-    const [inputValue, setInputValue] = useState('');
-    const handleSubmit = async (event) => {
-        event.preventDefault();
-        setLoading(true);
-        setError(null);
-    
-        try {
-          const response = await fetch('https://api.example.com/submit', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ value: inputValue }), // Replace with your data format
-          });
-    
-          if (!response.ok) {
-            throw new Error('Network response was not ok');
-          }
-    
-          const result = await response.json();
-          setData(result);
-        } catch (error) {
-          setError(error);
-        } finally {
-          setLoading(false);
-        }
-      };
+
     
     return (
         <div className="body">
@@ -106,10 +77,10 @@ function contact() {
                                                 data-split="word"
                                                 data-duration="1"
                                             >
-                                                Let’s working together
+                                                Let working together
                                             </h2>
                                             <p>
-                                                Thank you for your interest in Attach Web Agency. We're
+                                                Thank you for your interest in Attach Web Agency. We
                                                 excited to hear from you and discuss...
                                             </p>
                                         </div>
