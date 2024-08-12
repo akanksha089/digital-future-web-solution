@@ -1,0 +1,40 @@
+body {
+    background-color: #02050A ;
+  };
+
+
+h1.custom-heading {
+  color: #ffff;
+}
+h2.custom-heading {
+  color: #ffff;
+}
+h3.custom-heading {
+  color: #ffff;
+}
+h4.custom-heading {
+  color: #ffff;
+}
+h5.custom-heading {
+  color: #ffff;
+}
+h6.custom-heading {
+  color: #ffff;
+}
+
+.project-color {
+    background-color: transparent ;
+  };
+
+  h1.title.customHeading{
+    color: #ffffff; /* Using full hex code for white */
+  }
+
+  .service-item .service-custom-text a {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--rr-color-grey-2);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    display: block;
+}
