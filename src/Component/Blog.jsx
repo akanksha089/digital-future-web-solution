@@ -14,7 +14,6 @@ const BlogSection = () => {
         }
         const result = await response.json();
         setData(result);
-        console.log('Fetched data:', result); // Log the fetched data
       } catch (error) {
         setError(error);
       } finally {

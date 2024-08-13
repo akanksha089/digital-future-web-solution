@@ -15,7 +15,6 @@ function Service() {
                 }
                 const result = await response.json();
                 setData(result);
-                console.log('dataaaaaaaaaaaaaaaaaaaaaaa', data)
             } catch (error) {
                 setError(error);
             } finally {

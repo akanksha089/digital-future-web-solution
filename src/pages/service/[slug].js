@@ -134,7 +134,7 @@ const ServiceDetails = () => {
                                         </div>
                                         <div className="col-lg-4 col-md-12">
                                             <div className="service-widget">
-                                                <h3 className="widget-title custom-heading">Categories</h3>
+                                                <h3 className="widget-title custom-heading">Services</h3>
                                                 <ul className="category-list">
 
                                                {serviceData && serviceData.blogs && serviceData.blogs.length > 0 ? (

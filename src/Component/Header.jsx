@@ -15,7 +15,6 @@ export default function Header() {
         }
         const result = await response.json();
         setData(result);
-        console.log('Fetched data:', result); // Log the fetched data
       } catch (error) {
         setError(error);
       } finally {
@@ -27,7 +26,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="header inner-header sticky-active">
+    <header className="header inner-header sticky-active  ">
       <div className="primary-header">
         <div className="primary-header-inner">
           <div className="header-logo d-lg-block">
@@ -36,8 +35,8 @@ export default function Header() {
             </Link>
           </div>
           <div className="header-right-wrap">
-            <div className="header-menu-wrap">
-              <div className="mobile-menu-items">
+            <div className="header-menu-wrap" >
+              <div className="mobile-menu-items" >
                 <ul>
                   <li>
                     <Link href="/">Home</Link>

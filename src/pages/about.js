@@ -538,10 +538,7 @@ function about() {
             </div>
             <div id="scroll-percentage"><span id="scroll-percentage-value"></span></div>
 
-            <div id="theme-toogle" className="switcher-button">
-                <div className="switcher-button-inner-left"></div>
-                <div className="switcher-button-inner"></div>
-            </div>
+            
         </div>
     )
 }

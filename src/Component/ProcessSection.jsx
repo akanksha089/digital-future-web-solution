@@ -5,7 +5,7 @@ const ProcessSection = () => {
   return (
     <section className="process-section pt-130 fade-wrapper">
       <div className="bg-shape">
-        <Image 
+        <img 
           src="/assets/img/shapes/process-shape.png" 
           alt="shape" 
           layout="fill" 

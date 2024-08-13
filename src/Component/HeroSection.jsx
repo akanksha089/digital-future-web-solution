@@ -52,8 +52,8 @@ const HeroSection = () => {
       <div className="container">
         <div className="hero-content">
           <h4 className="sub-title anim-text custom-heading">Transforming</h4>
-          <h2 className="title anim-text custom-heading">Visions into</h2>
-          <h3 className="bottom-title anim-text custom-heading">Digital Reality</h3>
+          <h2 className="title anim-text ">Visions into</h2>
+          <h3 className="bottom-title anim-text custom-heading ">Digital Reality</h3>
           <Link href="/about" className="hero-btn">
             <i className="fa-thin fa-arrow-right"></i>
           </Link>

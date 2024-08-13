@@ -64,7 +64,7 @@ const FAQSection = () => {
                   {data && data.blogs && data.blogs.length > 0 ? (
                     data.blogs.map((item, index) => (
                       <div key={index} className="accordion-item">
-                        <h2 className="accordion-header custom-heading" id={`heading${index}`}>
+                        <h2 className="accordion-header  " id={`heading${index}`} >
                           <button
                             className={`accordion-button ${activeIndex === index ? '' : 'collapsed'}`}
                             type="button"

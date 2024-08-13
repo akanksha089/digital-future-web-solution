@@ -14,7 +14,6 @@ const FooterSection = () => {
         }
         const result = await response.json();
         setData(result.settings);
-        console.log('Fetched data11111111111', result.settings); // Log the fetched data
       } catch (error) {
         setError(error);
       } finally {
@@ -27,7 +26,7 @@ const FooterSection = () => {
   return (
     <footer className="footer-section bg-dark-1">
       <div className="shape">
-        <img src="assets/img/shapes/footer-shape.png" alt="footer" />
+        <img src="/assets/img/shapes/footer-shape.png" alt="footer" />
       </div>
       <div className="container">
         <div className="row footer-wrap">
@@ -35,17 +34,17 @@ const FooterSection = () => {
             <div className="footer-widget">
               <div className="widget-header">
                 <div className="footer-logo">
-                  <a href="index.html">
-                    <img src={data && data.header_logo ? data.header_logo : "not found"} alt="logo" />
-                  </a>
+                  <Link href="/">
+                    {/* <img src={data && data.header_logo ? data.header_logo : "not found"} alt="logo" /> */}
+                  </Link>
                 </div>
               </div>
               <p className="mb-20">
                 Centric applications productize before front end vortals visualize front end is results and value added
               </p>
-              <h4 className="title">
+              {/* <h4 className="title">
                 WE ARE AVAILABLE <span>Mon-Sat: 09.00 am to 6.30 pm</span>
-              </h4>
+              </h4> */}
             </div>
           </div>
           <div className="col-lg-3 col-md-6">
@@ -54,10 +53,10 @@ const FooterSection = () => {
                 <h3 className="widget-title">Useful Links</h3>
               </div>
               <ul className="footer-list">
-                <li><Link href="about.html">About Us</Link></li>
-                <li><Link href="project.html">Our Gallery</Link></li>
-                <li><Link href="service.html">Our Services</Link></li>
-                <li><Link href="team.html">Our Team</Link></li>
+                <li><Link href="/about">About </Link></li>
+                <li><Link href="/service">Our Services</Link></li>
+                <li><Link href="/blog">Blog</Link></li>
+                <li><Link href="/contact">Contact</Link></li>
               </ul>
             </div>
           </div>
