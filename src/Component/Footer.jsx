@@ -66,11 +66,11 @@ const FooterSection = () => {
                 <h3 className="widget-title">Contact Us</h3>
               </div>
               <ul className="address-list">
-                <li><a href="mailto:support@agency.com">{data && data.email ? data.email : "email not found"}</a></li>
-                <li><a href="tel:+2585492153215">{data && data.phone ? data.phone : "phone not found"}</a></li>
                 <li>
                   {data && data.address ? data.address : "address not found"} <br />
                 </li>
+                <li><Link href={data && data.email ? data.email : "email not found"}>{data && data.email ? data.email : "email not found"}</Link></li>
+                <li><Link href={data && data.phone ? data.phone : "phone not found"}>{data && data.phone ? data.phone : "phone not found"}</Link></li>
               </ul>
             </div>
           </div>

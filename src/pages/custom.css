@@ -21,6 +21,9 @@ body {
 .header .primary-header-inner .header-right-wrap .header-right .sidebar-trigger svg {
   color: var(--rr-color-theme-primary);
 }
+.sidebar-area {
+  background-color: var(--rr-color-common-white);
+}
 .hero-content .title {
   color: #3F5AF3;
 }

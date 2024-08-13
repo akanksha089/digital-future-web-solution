@@ -1,6 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
 
 export default function Sidebar() {
+    const [data, setData] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const response = await fetch('https://dfweb-v2.onrender.com/api/v1/api-settings');
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          const result = await response.json();
+          setData(result.settings);
+        } catch (error) {
+          setError(error);
+        } finally {
+          setLoading(false);
+        }
+      };
+  
+      fetchData();
+    }, []);
   return (
     <div id="sidebar-area" className="sidebar-area">
     <button className="sidebar-trigger close  ">
@@ -9,7 +31,7 @@ export default function Sidebar() {
             width="16px"
             height="12.7px"
             viewBox="0 0 16 12.7"
-            style={{ enableBackground: 'new 0 0 16 12.7', color:'gray' }}
+            style={{ enableBackground: 'new 0 0 16 12.7' }}
         >
             <g>
                 <rect
@@ -31,12 +53,12 @@ export default function Sidebar() {
     </button>
     <div className="side-menu-content">
         <div className="side-menu-logo">
-            <a className="dark-img" href="index.html">
+            <Link className="dark-img" href="/">
                 <img src="\assets\img\logo\dfw.png" alt="logo"/>
-            </a>
-            <a className="light-img" href="index.html">
+            </Link>
+            <Link className="light-img" href="/">
                 <img src="\assets\img\logo\dfw.png" alt="logo"/>
-            </a>
+            </Link>
         </div>
         <div className="side-menu-wrap"></div>
         <div className="side-menu-about">
@@ -46,7 +68,7 @@ export default function Sidebar() {
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud nisi ut aliquip ex ea commodo consequat.
             </p>
-            <a href="contact.html" className="rr-primary-btn">Contact Us</a>
+            <Link href="/contact" className="rr-primary-btn">Contact Us</Link>
         </div>
         <div className="side-menu-contact">
             <div className="side-menu-header">
@@ -55,23 +77,29 @@ export default function Sidebar() {
             <ul className="side-menu-list">
                 <li>
                     <i className="fas fa-map-marker-alt"></i>
-                    <p>Valentin, Street Road 24, New York, </p>
+                    <p>{data && data.address ? data.address : "address not found"} </p>
                 </li>
                 <li>
                     <i className="fas fa-phone"></i>
-                    <a href="tel:+000123456789">+000 123 (456) 789</a>
+                    <a href="tel:+000123456789">{data && data.phone ? data.phone : "phone not found"}</a>
                 </li>
                 <li>
                     <i className="fas fa-envelope-open-text"></i>
-                    <a href="mailto:runokcontact@gmail.com">runokcontact@gmail.com</a>
+                    <Link href={data && data.email ? data.email : "email not found"}>{data && data.email ? data.email : "email not found"}</Link>
                 </li>
             </ul>
         </div>
         <ul className="side-menu-social">
-            <li className="facebook"><a href="#"><i className="fab fa-facebook-f"></i></a></li>
-            <li className="instagram"><a href="#"><i className="fab fa-instagram"></i></a></li>
-            <li className="twitter"><a href="#"><i className="fab fa-twitter"></i></a></li>
-            <li className="g-plus"><a href="#"><i className="fab fa-google-plus"></i></a></li>
+            <li className="facebook">
+            <Link href={data && data.fb_url ? data.fb_url : "#"}>
+                    <i className="fab fa-facebook-f"></i></Link>
+                </li>
+
+            <li className="instagram">
+            <Link href={data && data.instagram_url ? data.instagram_url : "#"}>
+            <i className="fab fa-instagram"></i></Link></li>
+            <li className="twitter">   <Link href={data && data.twitter_url ? data.twitter_url : "#"}><i className="fab fa-twitter"></i></Link></li>
+            <li className="g-plus">   <Link href={data && data.google_url ? data.google_url : "#"}><i className="fab fa-google-plus"></i></Link></li>
         </ul>
     </div>
 </div>
