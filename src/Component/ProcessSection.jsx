@@ -5,11 +5,11 @@ const ProcessSection = () => {
   return (
     <section className="process-section pt-130 fade-wrapper">
       <div className="bg-shape">
-        <img 
-          src="/assets/img/shapes/process-shape.png" 
-          alt="shape" 
-          layout="fill" 
-          objectFit="cover" 
+        <img
+          src="/assets/img/shapes/process-shape.png"
+          alt="shape"
+          layout="fill"
+          objectFit="cover"
         />
       </div>
       <div className="container">
@@ -59,14 +59,14 @@ const ProcessSection = () => {
                     layout="fill" 
                     objectFit="cover" 
                   /> */}
-                  <Image 
-                    className="light-img" 
-                    src={process.iconLight} 
-                    alt="icon" 
+                  <Image
+                    className="light-img"
+                    src={process.iconLight}
+                    alt="icon"
                     width={55}
                     height={55}
-                    // layout="fill" 
-                    // objectFit="contain" 
+                  // layout="fill" 
+                  // objectFit="contain" 
                   />
                 </div>
                 <div className="process-content">
@@ -86,13 +86,14 @@ const ProcessSection = () => {
           layout="fill" 
           objectFit="cover" 
         /> */}
-        <Image 
-          className="process-img-light light-img" 
-          src="/assets/img/images/process-img-light.png" 
-          alt="process" 
+        <Image
+          className="process-img-light light-img"
+          src="/assets/img/images/process-img-light.png"
+          alt="process"
           width={1553}
-                    height={291}
-          objectFit="cover" 
+          height={291}
+          objectFit="cover"
+          
         />
       </div>
     </section>

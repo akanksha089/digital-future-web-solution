@@ -34,8 +34,8 @@ function MyApp({ Component, pageProps }) {
         <link rel="stylesheet" href="/assets/css/nice-select.css" />
         <link rel="stylesheet" href="/assets/css/swiper.min.css" />
         <link rel="stylesheet" href="/assets/css/main.css" />
-        {/* <link rel="stylesheet" href="/assets/css/carouselTicker.css" />
-          <link rel="stylesheet" href="/assets/css/main.css.map" /> */}
+        <link rel="stylesheet" href="/assets/css/carouselTicker.css" />
+          <link rel="stylesheet" href="/assets/css/main.css.map" /> 
       </Head>
       {/* Load jQuery first */}
       <Script src="https://code.jquery.com/jquery-3.6.0.min.js" strategy="beforeInteractive" />
@@ -56,11 +56,11 @@ function MyApp({ Component, pageProps }) {
       <Script src="/assets/js/scroll-smoother.js" strategy="lazyOnload" />
       <Script src="/assets/js/jquery.carouselTicker.js" strategy="lazyOnload" />
       <Script src="/assets/js/nice-select.js" strategy="lazyOnload" />
-      {/* <Script src="/assets/js/smooth-scroll.js" strategy="lazyOnload" /> */}
+      <Script src="/assets/js/smooth-scroll.js" strategy="lazyOnload" />
       <Script src="/assets/js/ajax-form.js" strategy="lazyOnload" />
       <Script src="/assets/js/contact.js" strategy="lazyOnload" />
       <Script src="/assets/js/main.js" strategy="lazyOnload" />
-      {/* <Script src="/assets/js/slider.js" strategy="lazyOnload" /> */}
+      <Script src="/assets/js/slider.js" strategy="lazyOnload" />
 
       <Component {...pageProps} />
     </>

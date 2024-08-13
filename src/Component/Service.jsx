@@ -44,7 +44,7 @@ function Service() {
                         data.blogs.map((item, index) => (
                             <div key={index} className="col-lg-3 col-md-6">
                                 <div className="service-item md-pb-30 fade-top">
-                                    <h4 className="service-text service-custom-text custom-heading"><Link href={`/service/${item.slug}`}>{item.title}</Link></h4>
+                                    <h4 className="service-text service-custom-text custom-heading"><Link href={`/service/${item.slug}`}>/{item.title}</Link></h4>
                                     <div className="service-thumb">
                                         <div className="overlay-color"></div>
                                         <div className="transparent-shape"><img src="assets/img/shapes/service-shape.png" alt="shape" /></div>
