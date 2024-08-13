@@ -78,19 +78,21 @@ const AboutSection = () => {
           </div>
         </div>
         <div className="about-text">
-          <img
+          {/* <img
             className="dark-img"
             src="/assets/img/images/about-text.png"
             alt="about"
             layout="fill"
             objectFit="cover"
-          />
+          /> */}
           <img
             className="light-img"
             src="/assets/img/images/about-text-light.png"
             alt="about"
             layout="fill"
             objectFit="cover"
+            width={660}
+            height={100}
           />
         </div>
       </div>

@@ -52,19 +52,21 @@ const ProcessSection = () => {
               <div className="process-item fade-top">
                 <div className="process-icon">
                   <div className="icon-border"></div>
-                  <Image 
+                  {/* <Image 
                     className="dark-img" 
                     src={process.icon} 
                     alt="icon" 
                     layout="fill" 
                     objectFit="cover" 
-                  />
+                  /> */}
                   <Image 
                     className="light-img" 
                     src={process.iconLight} 
                     alt="icon" 
-                    layout="fill" 
-                    objectFit="cover" 
+                    width={55}
+                    height={55}
+                    // layout="fill" 
+                    // objectFit="contain" 
                   />
                 </div>
                 <div className="process-content">
@@ -77,18 +79,19 @@ const ProcessSection = () => {
         </div>
       </div>
       <div className="process-text wow fade-in-bottom" data-wow-delay="400ms">
-        <Image 
+        {/* <Image 
           className="dark-img" 
           src="/assets/img/images/process-img.png" 
           alt="process" 
           layout="fill" 
           objectFit="cover" 
-        />
+        /> */}
         <Image 
           className="process-img-light light-img" 
           src="/assets/img/images/process-img-light.png" 
           alt="process" 
-          layout="fill" 
+          width={1553}
+                    height={291}
           objectFit="cover" 
         />
       </div>
