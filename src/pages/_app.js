@@ -1,30 +1,21 @@
-import { useEffect } from 'react';
+import React, {useEffect} from 'react';
 import Script from 'next/script';
 import Head from 'next/head';
 import './custom.css';
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, someObject  }) {
   useEffect(() => {
-    // Ensure jQuery is loaded
-    if (window.$) {
-      console.log("jQuery is loaded");
-
-      // Initialize jQuery plugins here
-      // For example, initialize Waypoints
-      if (window.Waypoint) {
-        // Your Waypoints initialization code here
-      }
+    if (someObject && typeof someObject.getScrollFunc === 'function') {
+        someObject.getScrollFunc();
     } else {
-      console.error("jQuery is not loaded");
+         console.log("");
     }
-  }, []);
-
+}, [someObject]); 
   return (
     <>
       <Head>
         <title>DIgital Future Web Solutions</title>
-        <link rel="shortcut icon" type="image/x-icon" href="\assets\img\favicon.ico" />
-        <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.png" />
+        <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.ico" />
         <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
         <link rel="stylesheet" href="/assets/css/fontawesome.min.css" />
         <link rel="stylesheet" href="/assets/css/venobox.min.css" />
@@ -60,7 +51,7 @@ function MyApp({ Component, pageProps }) {
       <Script src="/assets/js/ajax-form.js" strategy="lazyOnload" />
       <Script src="/assets/js/contact.js" strategy="lazyOnload" />
       <Script src="/assets/js/main.js" strategy="lazyOnload" />
-      <Script src="/assets/js/slider.js" strategy="lazyOnload" />
+      {/* <Script src="/assets/js/slider.js" strategy="lazyOnload" /> */}
 
       <Component {...pageProps} />
     </>

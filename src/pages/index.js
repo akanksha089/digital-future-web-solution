@@ -16,6 +16,9 @@ export default function Home() {
     <div className="body">
     <Header/>
     <Sidebar/>
+    {/* <div id="preloader">
+            <div className="loading" data-loading-text="Runok"></div>
+        </div> */}
     <div id="smooth-wrapper">
     <div id="smooth-content">
     <HeroSection/>  

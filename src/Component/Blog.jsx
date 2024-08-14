@@ -70,7 +70,7 @@ const BlogSection = () => {
         </div>
       </section>
 
-      <section className="sponsor-section pb-130">
+      {/* <section className="sponsor-section pb-130">
         <div className="container">
           <div className="sponsor-wrap">
             <div className="sponsor-item item-1">
@@ -100,7 +100,7 @@ const BlogSection = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
 
   );

@@ -924,12 +924,12 @@
     
 
     // create the smooth scroller FIRST!
-    let smoother = ScrollSmoother.create({
+ let smoother = ScrollSmoother.create({
         smooth: 2,
-        effects: device_width < 1025 ? false : true,
+       effects: device_width < 1025 ? false : true,
         smoothTouch: false,
         normalizeScroll: true,
         ignoreMobileResize: true,
-    });
+     });
 
 })(jQuery);

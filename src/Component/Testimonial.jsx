@@ -30,17 +30,33 @@ const TestimonialSection = () => {
             // Initialize Swiper after data is loaded and rendered
             if (typeof Swiper !== 'undefined') {
                 const swiper = new Swiper('.swiper-container', {
+                    slidesPerView: 3,
+                    spaceBetween: 24,
+                    slidesPerGroup: 1,
                     loop: true,
+                    autoplay: true,
+                    grabcursor: true,
+                    speed: 400,
                     pagination: {
-                        el: '.swiper-pagination',
+                        el: ".swiper-pagination",
                         clickable: true,
                     },
-                    slidesPerView: 3,
-                    spaceBetween: 30,
-                    autoplay: {
-                        delay: 2500,
-                        disableOnInteraction: false,
-                    },
+                    breakpoints: {
+                        320: {
+                            slidesPerView: 1,
+                            slidesPerGroup: 1,
+                            spaceBetween: 25,
+                        },
+                        767: {
+                            slidesPerView: 2,
+                            slidesPerGroup: 1,
+                            spaceBetween: 30,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            slidesPerGroup: 1,
+                        },
+                    },  
                 });
 
                 // Update Swiper to recognize dynamically added slides
@@ -70,9 +86,12 @@ const TestimonialSection = () => {
                                             <h3 className="author">
                                                 {item.title} <span>{item.designation}</span>
                                             </h3>
-                                            <p>
-                                                {item.description ? ReactHtmlParser(item.description) : 'Description not found'}
-                                            </p>
+                                            {item && item.description ? (
+                                                <div>{ReactHtmlParser(item.description)}</div>
+                                            ) : (
+                                                <p>Description not found</p>
+                                            )}
+
                                         </div>
                                     </div>
                                 </div>
@@ -81,10 +100,11 @@ const TestimonialSection = () => {
                             'No testimonials found'
                         )}
                     </div>
-                    <div className="swiper-pagination swiper-pagination-bullet swiper-pagination-bullet-active"></div>
+                    <div className="swiper-pagination"></div> {/* Updated pagination */}
                 </div>
             </div>
         </section>
+
     );
 };
 

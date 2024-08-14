@@ -23,6 +23,12 @@ const FooterSection = () => {
 
     fetchData();
   }, []);
+  const socialMediaLinks = [
+    { platform: 'facebook', iconClass: 'fab fa-facebook-f', url: data?.fb_url },
+    { platform: 'pinterest', iconClass: 'fab fa-pinterest', url: data?.pinterest_url },
+    { platform: 'twitter', iconClass: 'fab fa-twitter', url: data?.twitter_url },
+    { platform: 'instagram', iconClass: 'fab fa-instagram', url: data?.instagram_url },
+  ];
   return (
     <footer className="footer-section bg-dark-1">
       <div className="shape">
@@ -116,26 +122,16 @@ const FooterSection = () => {
             </div>
             <div className="col-md-6">
               <ul className="social-list">
-                <li className="facebook">
-                  <Link href={data && data.fb_url ? data.fb_url : "#"}>
-                    <i className="fab fa-facebook-f"></i>
-                  </Link>
-                </li>
-                <li className="pinterest">
-                  <Link href={data && data.pinterest_url ? data.pinterest_url : "#"}>
-                    <i className="fab fa-pinterest"></i>
-                  </Link>
-                </li>
-                <li className="twitter">
-                  <Link href={data && data.twitter_url ? data.twitter_url : "#"}>
-                    <i className="fab fa-twitter"></i>
-                  </Link>
-                </li>
-                <li className="instagram">
-                  <Link href={data && data.instagram_url ? data.instagram_url : "#"}>
-                    <i className="fab fa-instagram"></i>
-                  </Link>
-                </li>
+                {socialMediaLinks
+                  .filter(link => link.url) // Only include platforms with URLs
+                  .map(link => (
+                    <li key={link.platform} className={link.platform}>
+                      <Link href={link.url}>
+                        <i className={link.iconClass}></i>
+                      </Link>
+                    </li>
+                  ))}
+
               </ul>
             </div>
 

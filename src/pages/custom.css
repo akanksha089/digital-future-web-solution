@@ -135,6 +135,8 @@ body {
 .running-text.testi ul li{
   color: var(--rr-color-heading-primary);
 }
+
+
 .project-item .project-content .project-right .title {
   color: var(--rr-color-heading-primary);
 }
@@ -212,3 +214,37 @@ body {
 .testi-item .testi-thumb {
   border: 10px solid var(--rr-color-common-white);
 }
+
+/* Ensure swiper-pagination is centered and positioned correctly */
+.swiper-pagination {
+  position: absolute;
+  text-align: center;
+  transition: .3s opacity;
+  transform: translate3d(0, 0, 0);
+  z-index: 10;
+  left: 0;
+  right: 0;
+  bottom: 10px; 
+  /* Adjust this value to move the pagination up or down */
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-pagination-bullet {
+  background: #ffff; /* Change bullet color as needed */
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  opacity: 1;
+  margin: 0 5px;
+}
+
+.swiper-pagination-bullet-active {
+  background: #007aff; /* Active bullet color */
+  width: 14px;
+  height: 14px;
+}
+
+
+.testi-carousel .swiper-pagination{position: relative  !important; margin-top:40px !important}
+.service-item:hover .service-text a{color:#007aff !important}
