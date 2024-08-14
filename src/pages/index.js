@@ -12,7 +12,6 @@ import FooterSection from "../Component/Footer";
 export default function Home() {
     return (
     <>
-
     <div className="body">
     <Header/>
     <Sidebar/>

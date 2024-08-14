@@ -9,7 +9,7 @@ const AboutSection = () => {
           src="/assets/img/shapes/round-shape.png"
           alt="shape"
           layout="fill"
-          objectFit="cover"
+          style={{ objectFit: 'cover' }}
         />
       </div>
       <div className="about-wrap">
@@ -18,7 +18,7 @@ const AboutSection = () => {
             src="/assets/img/shapes/about-dot-shape.png"
             alt="shape"
             layout="fill"
-            objectFit="cover"
+            style={{ objectFit: 'cover' }}
           />
         </div>
         <div className="row about-wrapper align-items-center">
@@ -62,7 +62,7 @@ const AboutSection = () => {
                   src="\assets\img\images\about-img.jpg"
                   alt="img"
                   layout="fill"
-                  objectFit="cover"
+                  style={{ objectFit: 'cover' }}
                 />
               </div>
               <div className="about-img-2 reveal">
@@ -71,7 +71,7 @@ const AboutSection = () => {
                   src="/assets/img/images/about-img-1.jpg"
                   alt="img"
                   layout="fill"
-                  objectFit="cover"
+                  style={{ objectFit: 'cover' }}
                 />
               </div>
             </div>
@@ -90,7 +90,7 @@ const AboutSection = () => {
             src="/assets/img/images/about-text-light.png"
             alt="about"
             layout="fill"
-            objectFit="cover"
+            style={{ objectFit: 'cover' }}
             width={660}
             height={100}
           />

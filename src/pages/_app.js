@@ -3,30 +3,21 @@ import Script from 'next/script';
 import Head from 'next/head';
 import './custom.css';
 
-function MyApp({ Component, pageProps, someObject  }) {
+function MyApp({ Component, pageProps,  }) {
   useEffect(() => {
-    if (someObject && typeof someObject.getScrollFunc === 'function') {
-        someObject.getScrollFunc();
+
+    if (window.myScrollSmoother) {
+        console.log('getScrollFunc:', window.myScrollSmoother.getScrollFunc);
     } else {
-         console.log("");
+        console.error('Scroll smoother object is not available.');
     }
-}, [someObject]); 
+}, []);
+
   return (
     <>
       <Head>
         <title>DIgital Future Web Solutions</title>
         <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.ico" />
-        <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="/assets/css/fontawesome.min.css" />
-        <link rel="stylesheet" href="/assets/css/venobox.min.css" />
-        <link rel="stylesheet" href="/assets/css/animate.min.css" />
-        <link rel="stylesheet" href="/assets/css/keyframe-animation.css" />
-        <link rel="stylesheet" href="/assets/css/odometer.min.css" />
-        <link rel="stylesheet" href="/assets/css/nice-select.css" />
-        <link rel="stylesheet" href="/assets/css/swiper.min.css" />
-        <link rel="stylesheet" href="/assets/css/main.css" />
-        <link rel="stylesheet" href="/assets/css/carouselTicker.css" />
-          <link rel="stylesheet" href="/assets/css/main.css.map" /> 
       </Head>
       {/* Load jQuery first */}
       <Script src="https://code.jquery.com/jquery-3.6.0.min.js" strategy="beforeInteractive" />

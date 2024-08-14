@@ -9,7 +9,7 @@ const ProcessSection = () => {
           src="/assets/img/shapes/process-shape.png"
           alt="shape"
           layout="fill"
-          objectFit="cover"
+          style={{ objectFit: 'cover' }}
         />
       </div>
       <div className="container">
@@ -66,7 +66,7 @@ const ProcessSection = () => {
                     width={55}
                     height={55}
                   // layout="fill" 
-                  // objectFit="contain" 
+                  style={{ objectFit: 'contain' }}
                   />
                 </div>
                 <div className="process-content">
@@ -86,14 +86,13 @@ const ProcessSection = () => {
           layout="fill" 
           objectFit="cover" 
         /> */}
-        <Image
+        <img
           className="process-img-light light-img"
           src="/assets/img/images/process-img-light.png"
           alt="process"
           width={1553}
           height={291}
-          objectFit="cover"
-          
+          style={{ objectFit: 'cover' }}         
         />
       </div>
     </section>

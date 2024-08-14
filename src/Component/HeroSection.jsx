@@ -10,7 +10,7 @@ const HeroSection = () => {
           src="/assets/img/bg-img/hero-bg-shape.png"
           alt="shape"
           layout="fill"
-          objectFit="cover"
+          style={{ objectFit: 'cover' }}
         />
       </div>
       <div className="hero-shape">
@@ -18,7 +18,7 @@ const HeroSection = () => {
           src="/assets/img/shapes/hero-shape-1.png"
           alt="shape"
           layout="fill"
-          objectFit="cover"
+          style={{ objectFit: 'cover' }}
         />
       </div>
       <div className="hero-images">
@@ -26,19 +26,19 @@ const HeroSection = () => {
           src="/assets/img/images/hero-img-1.png"
           alt="hero"
           layout="fill"
-          objectFit="cover"
+          style={{ objectFit: 'cover' }}
         />
         <img
           src="/assets/img/images/hero-img-2.png"
           alt="hero"
           layout="fill"
-          objectFit="cover"
+          style={{ objectFit: 'cover' }}
         />
         <img
           src="/assets/img/images/hero-img-3.png"
           alt="hero"
           layout="fill"
-          objectFit="cover"
+          style={{ objectFit: 'cover' }}
         />
       </div>
       <div className="hero-img">
@@ -46,7 +46,7 @@ const HeroSection = () => {
           src="/assets/img/images/hero-img.png"
           alt="hero"
           layout="fill"
-          objectFit="cover"
+          style={{ objectFit: 'cover' }}
         />
       </div>
       <div className="container">

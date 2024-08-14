@@ -248,3 +248,17 @@ body {
 
 .testi-carousel .swiper-pagination{position: relative  !important; margin-top:40px !important}
 .service-item:hover .service-text a{color:#007aff !important}
+
+.post-card .post-content .title:hover a{
+  color: #007aff;
+}
+.post-content-wrap .post-meta li {
+  font-family: var(--rr-ff-body);
+  color: #74787C;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
