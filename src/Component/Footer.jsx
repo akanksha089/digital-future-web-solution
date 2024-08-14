@@ -39,9 +39,9 @@ const FooterSection = () => {
           <div className="col-lg-3 col-md-6">
             <div className="footer-widget">
               <div className="widget-header">
-                <div className="footer-logo">
+                <div className="footer-logo ">
                   <Link href="/">
-                    {/* <img src={data && data.header_logo ? data.header_logo : "not found"} alt="logo" /> */}
+                    <img src="\assets\img\logo\dfw.png" alt="logo" />
                   </Link>
                 </div>
               </div>
