@@ -6,7 +6,7 @@ import FooterSection from "../Component/Footer";
 import Link from 'next/link';
 import ReactHtmlParser from 'html-react-parser';
 import './custom.css';
-function about() {
+function About() {
     const [data, setData] = useState(null);
     const [testiData, setTestiData] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -597,4 +597,4 @@ function about() {
     )
 }
 
-export default about
+export default About

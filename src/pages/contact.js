@@ -4,7 +4,7 @@ import Header from '../Component/Header';
 import Sidebar from '../Component/Sidebar';
 import FooterSection from "../Component/Footer";
 import './custom.css';
-function contact() {
+function Contact() {
     const [settingdata, setSettingData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(0);
@@ -293,4 +293,4 @@ function contact() {
     )
 }
 
-export default contact
+export default Contact
