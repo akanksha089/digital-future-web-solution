@@ -41,18 +41,18 @@ export default function Header() {
               <div className="mobile-menu-items">
                 <ul>
                   <li>
-                    <a href="/">Home</a>
+                    <Link href="/">Home</Link>
                   </li>
                   <li>
-                    <a href="/about">About</a>
+                    <Link href="/about">About</Link>
                   </li>
                   <li className="menu-item-has-children active">
-                    <a href="/service">Services</a>
+                    <Link href="/service">Services</Link>
                     <ul>
                       {data && data.blogs && data.blogs.length > 0 ? (
                         data.blogs.map((item, index) => (
                           <li key={index}>
-                            <a href={`/service/${item.slug}`}>{item.title}</a>
+                            <Link href={`/service/${item.slug}`}>{item.title}</Link>
                           </li>
                         ))
                       ) : (
@@ -61,10 +61,10 @@ export default function Header() {
                     </ul>
                   </li>
                   <li>
-                    <a href="/blog">Blog</a>
+                    <Link href="/blog">Blog</Link>
                   </li>
                   <li>
-                    <a href="/contact">Contact</a>
+                    <Link href="/contact">Contact</Link>
                   </li>
                 </ul>
               </div>
