@@ -6,6 +6,9 @@ class MyDocument extends Document {
         return (
             <Html>
                 <Head>
+                    <meta name="viewport" content="width=device-width, initial-scale=1" />
+                    <meta charSet="UTF-8" />
+                    <meta name="language" content="en"></meta>
                     {/* Add your global stylesheets here */}
                     <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
                     <link rel="stylesheet" href="/assets/css/fontawesome.min.css" />

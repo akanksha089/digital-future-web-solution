@@ -1,13 +1,41 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
 import Header from '../Component/Header';
 import Sidebar from '../Component/Sidebar';
 import FooterSection from "../Component/Footer";
 import './custom.css';
 function contact() {
+    const [settingdata, setSettingData] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(0);
+    useEffect(() => {
 
-    
+        const fetchSettingData = async () => {
+            try {
+                const response = await fetch('https://dfweb-v2.onrender.com/api/v1/api-settings');
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const result = await response.json();
+                setSettingData(result.settings);
+            } catch (error) {
+                setError(error);
+            } finally {
+                setLoading(false);
+            }
+        };
+  fetchSettingData(); 
+    }, []);
+    const default_meta_title = settingdata && settingdata.default_meta_title || '';
+    const default_meta_description = settingdata?.default_meta_description || '';
+    const default_meta_keyword = settingdata?.default_meta_keyword || '';    
     return (
         <div className="body">
+            <Head>
+                    <title>{default_meta_title}</title>
+                    <meta name="description" content={default_meta_description} />
+                    <meta name="keyword" content={default_meta_keyword} />
+                </Head>
             <Header />
             <div id="popup-search-box">
                 <div className="box-inner-wrap d-flex align-items-center">
@@ -24,7 +52,7 @@ function contact() {
                     </div>
                 </div>
             </div>
-            <Sidebar />
+            <Sidebar data={settingdata}/>
             {/* <div id="preloader">
             <div className="loading" data-loading-text="Runok"></div>
         </div> */}
@@ -254,7 +282,7 @@ function contact() {
                             ></iframe>
                         </div>
                     </div>
-                    <FooterSection />
+                    <FooterSection data={settingdata}/>
                 </div>
             </div>
             <div id="scroll-percentage"><span id="scroll-percentage-value"></span></div>

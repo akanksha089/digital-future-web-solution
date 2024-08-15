@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Head from 'next/head';
 import Header from '../Component/Header';
 import Sidebar from '../Component/Sidebar';
 import FooterSection from "../Component/Footer";
@@ -6,37 +7,59 @@ import Link from 'next/link';
 import './custom.css';
 function Service() {
     const [data, setData] = useState(null);
+    const [serviceData, setServiceData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('https://dfweb-v2.onrender.com/api/v1/api-services');
+                const response = await fetch('https://dfweb-v2.onrender.com/api/v1/api-settings');
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
                 const result = await response.json();
-                setData(result);
-                console.log('dataaaaaaaaaaaaaaaaaaaaaaa', data)
-            } catch (error) {   
+                setData(result.settings);
+            } catch (error) {
                 setError(error);
             } finally {
                 setLoading(false);
             }
         };
 
-        fetchData();
+
+        const serviceFetchData = async () => {
+            try {
+                const response = await fetch('https://dfweb-v2.onrender.com/api/v1/api-services');
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const result = await response.json();
+                setServiceData(result);
+            } catch (error) {
+                setError(error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchData(), serviceFetchData();
     }, []);
 
 
-
+    const default_meta_title = data && data.default_meta_title || '';
+    const default_meta_description = data?.default_meta_description || '';
+    const default_meta_keyword = data?.default_meta_keyword || '';
 
     return (
         // <div className="text-white ">
         <div className="body ">
 
-
+            <Head>
+                <title>{default_meta_title}</title>
+                <meta name="description" content={default_meta_description} />
+                <meta name="keyword" content={default_meta_keyword} />
+            </Head>
             <Header />
             <div id="popup-search-box">
                 <div className="box-inner-wrap d-flex align-items-center">
@@ -54,7 +77,7 @@ function Service() {
                 </div>
             </div>
 
-            <Sidebar />
+            <Sidebar data={data}/>
             {/* <div id="preloader">
                 <div className="loading" data-loading-text="Runok"></div>
             </div> */}
@@ -95,8 +118,8 @@ function Service() {
                         <div className="container">
 
                             <div className="row gy-5">
-                                {data && data.blogs && data.blogs.length > 0 ? (
-                                    data.blogs.map((item, index) => (
+                                {serviceData && serviceData.blogs && serviceData.blogs.length > 0 ? (
+                                    serviceData.blogs.map((item, index) => (
                                         <div key={index} className="col-lg-3 col-md-6">
                                             <div className="service-item md-pb-30">
                                                 <h4 className="service-text service-custom-text"><Link href={`/service/${item.slug}`}>{item.title}</Link></h4>
@@ -114,8 +137,8 @@ function Service() {
                                                 </div>
                                             </div>
                                         </div>
-                                     ))
-                                    ) : "data"}
+                                    ))
+                                ) : "data"}
                             </div>
 
                         </div>
@@ -151,7 +174,7 @@ function Service() {
                             </div>
                         </div>
                     </section>
-                    <FooterSection />
+                    <FooterSection  data={data}/>
                 </div>
             </div>
             <div id="scroll-percentage"><span id="scroll-percentage-value"></span></div>

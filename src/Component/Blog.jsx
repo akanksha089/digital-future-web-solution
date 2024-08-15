@@ -52,19 +52,19 @@ const BlogSection = () => {
                             <li><i className="fa-light fa-user"></i>Post by: Admin</li>
                           </ul>
                           <h3 className="title custom-heading">
-                            <Link href={`/blog/${item.slug}`}>
+                            <a href={`/blog/${item.slug}`}>
                               {item.title}
-                            </Link>
+                            </a>
                           </h3>
-                          <Link href={`/blog/${item.slug}`} className="rr-primary-btn blog-btn">
+                          <a href={`/blog/${item.slug}`} className="rr-primary-btn blog-btn">
                             Read More <i className="fa-sharp fa-regular fa-arrow-right"></i>
-                          </Link>
+                          </a>
                         </div>
                       </div>
                     </div>
                   </div>
                 ))
-              ) : "blogs not found"
+              ) : ""
             }
           </div>
         </div>

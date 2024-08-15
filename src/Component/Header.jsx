@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 
 export default function Header() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
+  const router = useRouter();
+  const isHomePage = router.pathname === '/';
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -26,44 +28,43 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="header inner-header sticky-active  ">
+    <header className={`header inner-header sticky-active ${isHomePage ? '' : 'header-dark'}`}>
       <div className="primary-header">
         <div className="primary-header-inner">
           <div className="header-logo d-lg-block">
             <Link href="/">
-              <img src="\assets\img\logo\dfw.png" alt="Logo" />
+              <img src="/assets/img/logo/dfw.png" alt="Logo" />
             </Link>
           </div>
           <div className="header-right-wrap">
-            <div className="header-menu-wrap" >
-              <div className="mobile-menu-items" >
+            <div className="header-menu-wrap">
+              <div className="mobile-menu-items">
                 <ul>
                   <li>
-                    <Link href="/">Home</Link>
+                    <a href="/">Home</a>
                   </li>
                   <li>
-                    <Link href="/about">About</Link>
+                    <a href="/about">About</a>
                   </li>
                   <li className="menu-item-has-children active">
-                    <Link href="/service">Services</Link>
+                    <a href="/service">Services</a>
                     <ul>
-                    
-                      { data && data.blogs && data.blogs.length > 0 ? (
+                      {data && data.blogs && data.blogs.length > 0 ? (
                         data.blogs.map((item, index) => (
                           <li key={index}>
-                            <Link href={`/service/${item.slug}`}>{item.title}</Link>
+                            <a href={`/service/${item.slug}`}>{item.title}</a>
                           </li>
                         ))
                       ) : (
-                        <li>Service not found</li>
+                        <li></li>
                       )}
                     </ul>
                   </li>
                   <li>
-                    <Link href="/blog">Blog</Link>
+                    <a href="/blog">Blog</a>
                   </li>
                   <li>
-                    <Link href="/contact">Contact</Link>
+                    <a href="/contact">Contact</a>
                   </li>
                 </ul>
               </div>

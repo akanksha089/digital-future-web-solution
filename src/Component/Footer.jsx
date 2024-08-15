@@ -1,28 +1,6 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
 import Link from 'next/link';
-const FooterSection = () => {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('https://dfweb-v2.onrender.com/api/v1/api-settings');
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        const result = await response.json();
-        setData(result.settings);
-      } catch (error) {
-        setError(error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, []);
+const FooterSection = ({data}) => {
   const socialMediaLinks = [
     { platform: 'facebook', iconClass: 'fab fa-facebook-f', url: data?.fb_url },
     { platform: 'pinterest', iconClass: 'fab fa-pinterest', url: data?.pinterest_url },
@@ -73,10 +51,10 @@ const FooterSection = () => {
               </div>
               <ul className="address-list">
                 <li>
-                  {data && data.address ? data.address : "address not found"} <br />
+                  {data && data.address ? data.address : ""} <br />
                 </li>
-                <li><Link href={data && data.email ? data.email : "email not found"}>{data && data.email ? data.email : "email not found"}</Link></li>
-                <li><Link href={data && data.phone ? data.phone : "phone not found"}>{data && data.phone ? data.phone : "phone not found"}</Link></li>
+                <li><Link href={data && data.email ? data.email : ""}>{data && data.email ? data.email : ""}</Link></li>
+                <li><Link href={data && data.phone ? data.phone : ""}>{data && data.phone ? data.phone : ""}</Link></li>
               </ul>
             </div>
           </div>

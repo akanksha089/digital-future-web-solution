@@ -341,14 +341,52 @@ color: #ffff;
 
 
 .service-widget .category-list li a {
-  background-color: var(--rr-color-common-white) !important;
-  color: var(--rr-color-heading-primary) !important;
+  background-color: var(--rr-color-common-white) ;
+  color: var(--rr-color-heading-primary) ;
 }
 .service-widget .category-list li:hover a {
-  background-color: var(--rr-color-theme-primary) !important;
-  color: var(--rr-color-common-white) !important;
+  background-color: var(--rr-color-theme-primary) ;
+  color: var(--rr-color-common-white) ;
 }
 /* .service-widget .category-list li.active a {
   background-color: var(--rr-color-theme-primary) !important;
   color: var(--rr-color-common-white) !important;
 } */
+.post-card .post-content .rr-primary-btn:hover {
+  color: #ffff;
+}
+
+.counter-item .title {
+  color: rgba(63, 90, 243, 0.14);
+}
+
+.counter-item p {
+  font-size: 20px;
+  color: #74787C;
+  margin-bottom: 0;
+  margin-left: -20px;
+  position: relative;
+  z-index: 1;
+}
+.page-header .page-header-content .sub-title .home {
+  color: var(--rr-color-text-body);
+  position: relative;
+  padding-right: 25px;
+  margin-right: 20px;
+}
+.header-dark.fixed {
+  background-color: black !important;
+  color: white;
+}
+.header-dark {
+  background-color: transparent !important;
+  color: white;
+}
+
+.header-dark a {
+  color: white !important; /* Ensure links turn white */
+}
+
+.single-testimonial {
+  margin-bottom: 100px;
+}

@@ -72,7 +72,7 @@ const FAQSection = () => {
                             aria-expanded={activeIndex === index}
                             aria-controls={`collapse${index}`}
                           >
-                            {item && item.question ? item.question : "Question not found"}
+                            {item && item.question ? item.question : ""}
                           </button>
                         </h2>
                         <div
@@ -82,13 +82,13 @@ const FAQSection = () => {
                           data-bs-parent="#accordionExampleTwo"
                         >
                           <div className="accordion-body">
-                            {item && item.answer ? ReactHtmlParser(item.answer) : "Answer not found"}
+                            {item && item.answer ? ReactHtmlParser(item.answer) : ""}
                           </div>
                         </div>
                       </div>
                     ))
                   ) : (
-                    "FAQ not found"
+                    ""
                   )}
                 </div>
               </div>

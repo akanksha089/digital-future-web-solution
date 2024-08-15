@@ -1,28 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 
-export default function Sidebar() {
-    const [data, setData] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await fetch('https://dfweb-v2.onrender.com/api/v1/api-settings');
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                const result = await response.json();
-                setData(result.settings);
-            } catch (error) {
-                setError(error);
-            } finally {
-                setLoading(false);
-            }
-        };
-
-        fetchData();
-    }, []);
+export default function Sidebar({data}) {
     return (
         <div id="sidebar-area" className="sidebar-area">
             <button className="sidebar-trigger close  ">
@@ -77,15 +56,15 @@ export default function Sidebar() {
                     <ul className="side-menu-list">
                         <li>
                             <i className="fas fa-map-marker-alt"></i>
-                            <p>{data && data.address ? data.address : "address not found"} </p>
+                            <p>{data && data.address ? data.address : ""} </p>
                         </li>
                         <li>
                             <i className="fas fa-phone"></i>
-                            <a href="tel:+000123456789">{data && data.phone ? data.phone : "phone not found"}</a>
+                            <a href="tel:+000123456789">{data && data.phone ? data.phone : ""}</a>
                         </li>
                         <li>
                             <i className="fas fa-envelope-open-text"></i>
-                            <Link href={data && data.email ? data.email : "email not found"}>{data && data.email ? data.email : "email not found"}</Link>
+                            <Link href={data && data.email ? data.email : ""}>{data && data.email ? data.email : ""}</Link>
                         </li>
                     </ul>
                 </div>

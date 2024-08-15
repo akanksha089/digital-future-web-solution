@@ -1,14 +1,63 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import Head from 'next/head';
 import Header from '../Component/Header';
 import Sidebar from '../Component/Sidebar';
 import FooterSection from "../Component/Footer";
 import Link from 'next/link';
+import ReactHtmlParser from 'html-react-parser';
 import './custom.css';
 function about() {
+    const [data, setData] = useState(null);
+    const [testiData, setTestiData] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch('https://dfweb-v2.onrender.com/api/v1/api-settings');
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const result = await response.json();
+                setData(result.settings);
+            } catch (error) {
+                setError(error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        const testiFetchData = async () => {
+            try {
+                const response = await fetch('https://dfweb-v2.onrender.com/api/v1/api-testimonials');
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const result = await response.json();
+                setTestiData(result);
+            } catch (error) {
+                setError(error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchData(), testiFetchData();
+    }, []);
+
+    const default_meta_title = data && data.default_meta_title || '';
+    const default_meta_description = data?.default_meta_description || '';
+    const default_meta_keyword = data?.default_meta_keyword || '';   
 
     return (
         <div className="body">
-            <Header />
+             <Head>
+                    <title>{default_meta_title}</title>
+                    <meta name="description" content={default_meta_description} />
+                    <meta name="keyword" content={default_meta_keyword} />
+                </Head>
+            <Header/>
             <div id="popup-search-box">
                 <div className="box-inner-wrap d-flex align-items-center">
                     <form id="form" action="#" method="get" role="search">
@@ -17,7 +66,7 @@ function about() {
                     <div className="search-close"><i className="fa-sharp fa-regular fa-xmark"></i></div>
                 </div>
             </div>
-            <Sidebar />
+            <Sidebar data={data} />
             {/* <div id="preloader">
                 <div className="loading" data-loading-text="Runok"></div>
             </div> */}
@@ -39,13 +88,9 @@ function about() {
                         <div className="container">
                             <div className="page-header-content text-center">
                                 <h1 className="title">About Our Company</h1>
-                                <h4 className="sub-title">
-                                    <li>
-                                        <Link href="/">Home</Link>
-                                    </li>
-                                    <span></span>
-                                    <a className="inner-page" href="about.html">About Us</a>
-                                </h4>
+                             
+
+                                <h4 className="sub-title"><Link className="home" href="/">Home </Link><span></span><Link className="inner-page" href="/about"> About Us</Link></h4>
                             </div>
                         </div>
                     </section>
@@ -465,7 +510,7 @@ function about() {
                             </div>
                         </div>
                     </section>
-                    <section className="testimonial-section pt-130 pb-130 fade-wrapper">
+                    <section className="testimonial-section pt-130 pb-0 fade-wrapper">
                         <div className="container">
                             <div className="section-heading heading-3 text-center">
                                 <h4
@@ -484,23 +529,32 @@ function about() {
                                     Clients feedback
                                 </h2>
                             </div>
-                            <div className="row gy-lg-0 gy-4 testi-wrap justify-content-center">
-                                <div className="col-lg-4 col-md-6">
+                            <div className="row  gy-lg-0 gy-4 testi-wrap justify-content-center">
+                            {testiData && testiData.blogs && testiData.blogs.length > 0 ? (
+                            testiData.blogs.map((item, index) => (
+                                <div key={index}  className="col-lg-4 col-md-6 single-testimonial">
                                     <div className="testi-item item-3 text-center fade-top">
                                         <div className="testi-thumb">
-                                            <img src="assets/img/testi/testi-author-1.png" alt="img" />
+                                            <img src={item.image} alt="img" />
                                         </div>
                                         <div className="testi-content">
                                             <h3 className="author custom-heading">
-                                                Daniel Joseph <span>Writer</span>
+                                            {item.title} <span>{item.designation}</span>
                                             </h3>
-                                            <p>
-                                                Curabitur accumsan nec aliquam mauris placat primis lacinia egestas congue facilisis ligula leo sociosqu consequat
-                                            </p>
+                                            {item && item.description ? (
+                                                <p>{ReactHtmlParser(item.description)}</p>
+                                            ) : (
+                                                <p></p>
+                                            )}
+                                           
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-lg-4 col-md-6">
+                                 ))
+                                ) : (
+                                    ''
+                                )}
+                                {/* <div className="col-lg-4 col-md-6">
                                     <div className="testi-item item-3 text-center fade-top">
                                         <div className="testi-thumb">
                                             <img src="assets/img/testi/testi-author-3.png" alt="img" />
@@ -529,11 +583,11 @@ function about() {
                                             </p>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </section>
-                    <FooterSection />
+                    <FooterSection data={data} />
                 </div>
             </div>
             <div id="scroll-percentage"><span id="scroll-percentage-value"></span></div>

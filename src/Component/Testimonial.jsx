@@ -89,7 +89,7 @@ const TestimonialSection = () => {
                                             {item && item.description ? (
                                                 <div>{ReactHtmlParser(item.description)}</div>
                                             ) : (
-                                                <p>Description not found</p>
+                                                <p></p>
                                             )}
 
                                         </div>
@@ -97,7 +97,7 @@ const TestimonialSection = () => {
                                 </div>
                             ))
                         ) : (
-                            'No testimonials found'
+                            ''
                         )}
                     </div>
                     <div className="swiper-pagination"></div> {/* Updated pagination */}

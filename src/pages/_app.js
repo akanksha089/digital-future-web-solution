@@ -1,28 +1,38 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
+import { useRouter } from 'next/router';
 import Script from 'next/script';
 import Head from 'next/head';
 import './custom.css';
 
-function MyApp({ Component, pageProps,  }) {
-  useEffect(() => {
+function MyApp({ Component, pageProps }) {
+  const router = useRouter();
 
-    if (window.myScrollSmoother) {
-        console.log('getScrollFunc:', window.myScrollSmoother.getScrollFunc);
-    } else {
-        console.error('Scroll smoother object is not available.');
-    }
-}, []);
+  useEffect(() => {
+    // Reinitialize scripts after each route change
+    const handleRouteChange = () => {
+      if (typeof window !== 'undefined') {
+        // Reinitialize your plugins or effects here
+        if (window.myScrollSmoother) {
+          window.myScrollSmoother.init(); // Example: reinitialize your scroll smoother if needed
+        }
+        // Reinitialize any other plugins or custom scripts here
+      }
+    };
+
+    router.events.on('routeChangeComplete', handleRouteChange);
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router.events]);
 
   return (
     <>
       <Head>
-        <title>DIgital Future Web Solutions</title>
         <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.ico" />
       </Head>
+
       {/* Load jQuery first */}
       <Script src="https://code.jquery.com/jquery-3.6.0.min.js" strategy="beforeInteractive" />
-
-      {/* Use Script with `strategy="lazyOnload"` to avoid blocking initial render */}
       <Script src="/assets/js/bootstrap-bundle.js" strategy="lazyOnload" />
       <Script src="/assets/js/imagesloaded-pkgd.js" strategy="lazyOnload" />
       <Script src="/assets/js/waypoints.min.js" strategy="lazyOnload" />
@@ -42,7 +52,6 @@ function MyApp({ Component, pageProps,  }) {
       <Script src="/assets/js/ajax-form.js" strategy="lazyOnload" />
       <Script src="/assets/js/contact.js" strategy="lazyOnload" />
       <Script src="/assets/js/main.js" strategy="lazyOnload" />
-      {/* <Script src="/assets/js/slider.js" strategy="lazyOnload" /> */}
 
       <Component {...pageProps} />
     </>
