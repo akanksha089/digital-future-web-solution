@@ -51,7 +51,7 @@ export default function Header() {
                     <ul >
                       {data && data.blogs && data.blogs.length > 0 ? (
                         data.blogs.map((item, index) => (
-                          <li key={index}>
+                          <li key={index} className={` ${isHomePage ? '' : 'header-sub-dark '}`}>
                             <Link href={`/service/${item.slug}`}>{item.title}</Link>
                           </li>
                         ))
