@@ -48,7 +48,7 @@ export default function Header() {
                   </li>
                   <li className="menu-item-has-children active">
                     <Link href="/service">Services</Link>
-                    <ul>
+                    <ul >
                       {data && data.blogs && data.blogs.length > 0 ? (
                         data.blogs.map((item, index) => (
                           <li key={index}>

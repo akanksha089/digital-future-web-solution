@@ -385,12 +385,22 @@ color: #ffff;
 
 .header-dark a {
   color: white !important; /* Ensure links turn white */
+  background-color: black !important;;
+}
+
+.header .primary-header-inner .header-menu-wrap ul li.active ul li a:hover {
+  color: var(--rr-color-heading-primary);
 }
 
 .single-testimonial {
   margin-bottom: 100px;
 }
 
+
+.header .primary-header-inner .header-menu-wrap ul li.active ul li a {
+  color: var(--rr-color-heading-primary);
+  background-color: white;
+}
 .section-heading .section-title {
   font-size: 48px;
   line-height: 1.2;

@@ -52,7 +52,7 @@ const HeroSection = () => {
       <div className="container">
         <div className="hero-content">
           {/* <h4 className="sub-title anim-text custom-heading">Transforming</h4> */}
-          <h4 className="sub-title anim-text custom-heading active">
+          <h4 className="sub-title anim-text custom-heading ">
             <div className="line" style={{ display: 'block', textAlign: 'start', width: '100%' }}>
               <div className="char" style={{ display: 'inline-block', transform: 'translate(0px, 0%)' }}>T</div>
               <div className="char" style={{ display: 'inline-block', transform: 'translate(0px, 0%)' }}>r</div>
@@ -69,7 +69,7 @@ const HeroSection = () => {
             </div>
           </h4>
 
-          <h2 className="title anim-text active">
+          <h2 className="title anim-text ">
             <div className="line" style={{ display: 'block', textAlign: 'start', width: '100%' }}>
               <div className="char" style={{ display: 'inline-block', translate: 'none', rotate: 'none', scale: 'none', transform: 'translate(0px, 0%)' }}>V</div>
               <div className="char" style={{ display: 'inline-block', translate: 'none', rotate: 'none', scale: 'none', transform: 'translate(0px, 0%)' }}>i</div>
@@ -85,7 +85,7 @@ const HeroSection = () => {
             </div>
           </h2>
 
-          <h3 className="bottom-title anim-text custom-heading active">
+          <h3 className="bottom-title anim-text custom-heading ">
             <div className="line" style={{ display: 'block', textAlign: 'start', width: '100%' }}>
               <div className="char" style={{ display: 'inline-block', translate: 'none', rotate: 'none', scale: 'none', transform: 'translate(0px, 0%)' }}>D</div>
               <div className="char" style={{ display: 'inline-block', translate: 'none', rotate: 'none', scale: 'none', transform: 'translate(0px, 0%)' }}>i</div>
