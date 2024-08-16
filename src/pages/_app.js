@@ -9,16 +9,27 @@ function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
     // Reinitialize scripts after each route change
+    // const handleRouteChange = () => {
+    //   if (typeof window !== 'undefined') {
+    //     // Reinitialize your plugins or effects here
+    //     if (window.myScrollSmoother) {
+    //       window.myScrollSmoother.init(); // Example: reinitialize your scroll smoother if needed
+    //     }
+    //     // Reinitialize any other plugins or custom scripts here
+    //   }
+    // };
+
     const handleRouteChange = () => {
       if (typeof window !== 'undefined') {
-        // Reinitialize your plugins or effects here
-        if (window.myScrollSmoother) {
-          window.myScrollSmoother.init(); // Example: reinitialize your scroll smoother if needed
+        if (window.gsap) {
+          // Reinitialize GSAP animations or any other plugins as needed
+          gsap.fromTo('.anim-text .char',
+            { opacity: 0, y: 50 }, // start state
+            { opacity: 1, y: 0, stagger: 0.1, duration: 1 } // end state
+          );
         }
-        // Reinitialize any other plugins or custom scripts here
       }
     };
-
     router.events.on('routeChangeComplete', handleRouteChange);
     return () => {
       router.events.off('routeChangeComplete', handleRouteChange);

@@ -51,7 +51,24 @@ const HeroSection = () => {
       </div>
       <div className="container">
         <div className="hero-content">
-          <h4 className="sub-title anim-text custom-heading">Transforming</h4>
+          {/* <h4 className="sub-title anim-text custom-heading">Transforming</h4> */}
+          <h4 className="sub-title anim-text custom-heading">
+            <div className="line" style={{ display: 'block', textAlign: 'start', width: '100%' }}>
+              <div className="char" style={{ display: 'inline-block', transform: 'translate(0px, 0%)' }}>T</div>
+              <div className="char" style={{ display: 'inline-block', transform: 'translate(0px, 0%)' }}>r</div>
+              <div className="char" style={{ display: 'inline-block', transform: 'translate(0px, 0%)' }}>a</div>
+              <div className="char" style={{ display: 'inline-block', transform: 'translate(0px, 0%)' }}>n</div>
+              <div className="char" style={{ display: 'inline-block', transform: 'translate(0px, 0%)' }}>s</div>
+              <div className="char" style={{ display: 'inline-block', transform: 'translate(0px, 0%)' }}>f</div>
+              <div className="char" style={{ display: 'inline-block', transform: 'translate(0px, 0%)' }}>o</div>
+              <div className="char" style={{ display: 'inline-block', transform: 'translate(0px, 0%)' }}>r</div>
+              <div className="char" style={{ display: 'inline-block', transform: 'translate(0px, 0%)' }}>m</div>
+              <div className="char" style={{ display: 'inline-block', transform: 'translate(0px, 0%)' }}>i</div>
+              <div className="char" style={{ display: 'inline-block', transform: 'translate(0px, 0%)' }}>n</div>
+              <div className="char" style={{ display: 'inline-block', transform: 'translate(0px, 0%)' }}>g</div>
+            </div>
+          </h4>
+
           <h2 className="title anim-text">
             <div className="line" style={{ display: 'block', textAlign: 'start', width: '100%' }}>
               <div className="char" style={{ display: 'inline-block', translate: 'none', rotate: 'none', scale: 'none', transform: 'translate(0px, 0%)' }}>V</div>

@@ -390,3 +390,16 @@ color: #ffff;
 .single-testimonial {
   margin-bottom: 100px;
 }
+
+.section-heading .section-title {
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0;
+  text-transform: inherit;
+  position: relative;
+  overflow: hidden;
+  color: var(--rr-color-heading-primary);
+}
+

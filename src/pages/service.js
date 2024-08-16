@@ -77,7 +77,7 @@ function Service() {
                 </div>
             </div>
 
-            <Sidebar data={data}/>
+            <Sidebar data={data} />
             {/* <div id="preloader">
                 <div className="loading" data-loading-text="Runok"></div>
             </div> */}
@@ -158,13 +158,64 @@ function Service() {
                                         Make an Appointment
                                     </h4>
                                     <h2
-                                        className="section-title custom-heading"
-                                        data-text-animation
+                                        className="section-title active"
+                                        data-text-animation=""
                                         data-split="word"
                                         data-duration="1"
+                                        style={{ opacity: 1 }}
                                     >
-                                        Have Any Projects On Minds! <br />Contact Us
+                                        <div className="line" style={{ display: 'block', textAlign: 'start', width: '100%' }}>
+                                            <div className="word" style={{ display: 'inline-block', translate: 'none', rotate: 'none', scale: 'none', opacity: 1, transform: 'translate(0px, 0px)',  marginLeft: '6px' }}>
+                                                <div className="char" style={{ display: 'inline-block' }}>H</div>
+                                                <div className="char" style={{ display: 'inline-block' }}>a</div>
+                                                <div className="char" style={{ display: 'inline-block' }}>v</div>
+                                                <div className="char" style={{ display: 'inline-block' }}>e</div>
+                                            </div>
+                                            <div className="word" style={{ display: 'inline-block', translate: 'none', rotate: 'none', scale: 'none', opacity: 1, transform: 'translate(0px, 0px)',  marginLeft: '6px' }}>
+                                                <div className="char" style={{ display: 'inline-block' }}>A</div>
+                                                <div className="char" style={{ display: 'inline-block' }}>n</div>
+                                                <div className="char" style={{ display: 'inline-block' }}>y</div>
+                                            </div>
+                                            <div className="word" style={{ display: 'inline-block', translate: 'none', rotate: 'none', scale: 'none', opacity: 1, transform: 'translate(0px, 0px)'  ,marginLeft: '6px' }}>
+                                                <div className="char" style={{ display: 'inline-block' }}>P</div>
+                                                <div className="char" style={{ display: 'inline-block' }}>r</div>
+                                                <div className="char" style={{ display: 'inline-block' }}>o</div>
+                                                <div className="char" style={{ display: 'inline-block' }}>j</div>
+                                                <div className="char" style={{ display: 'inline-block' }}>e</div>
+                                                <div className="char" style={{ display: 'inline-block' }}>c</div>
+                                                <div className="char" style={{ display: 'inline-block' }}>t</div>
+                                                <div className="char" style={{ display: 'inline-block' }}>s</div>
+                                            </div>
+                                            <div className="word" style={{ display: 'inline-block', translate: 'none', rotate: 'none', scale: 'none', opacity: 1, transform: 'translate(0px, 0px)'  ,marginLeft: '6px'}}>
+                                                <div className="char" style={{ display: 'inline-block' }}>O</div>
+                                                <div className="char" style={{ display: 'inline-block' }}>n</div>
+                                            </div>
+                                            <div className="word" style={{ display: 'inline-block', translate: 'none', rotate: 'none', scale: 'none', opacity: 1, transform: 'translate(0px, 0px)'  ,marginLeft: '6px'}}>
+                                                <div className="char" style={{ display: 'inline-block' }}>M</div>
+                                                <div className="char" style={{ display: 'inline-block' }}>i</div>
+                                                <div className="char" style={{ display: 'inline-block' }}>n</div>
+                                                <div className="char" style={{ display: 'inline-block' }}>d</div>
+                                                <div className="char" style={{ display: 'inline-block' }}>s</div>
+                                                <div className="char" style={{ display: 'inline-block' }}>!</div>
+                                            </div>
+                                        </div>
+                                        <div className="line" style={{ display: 'block', textAlign: 'start', width: '100%' }}>
+                                            <div className="word" style={{ display: 'inline-block', translate: 'none', rotate: 'none', scale: 'none', opacity: 1, transform: 'translate(0px, 0px)',  marginLeft: '6px' }}>
+                                                <div className="char" style={{ display: 'inline-block' }}>C</div>
+                                                <div className="char" style={{ display: 'inline-block' }}>o</div>
+                                                <div className="char" style={{ display: 'inline-block' }}>n</div>
+                                                <div className="char" style={{ display: 'inline-block' }}>t</div>
+                                                <div className="char" style={{ display: 'inline-block' }}>a</div>
+                                                <div className="char" style={{ display: 'inline-block' }}>c</div>
+                                                <div className="char" style={{ display: 'inline-block' }}>t</div>
+                                            </div>
+                                            <div className="word" style={{ display: 'inline-block', translate: 'none', rotate: 'none', scale: 'none', opacity: 1, transform: 'translate(0px, 0px)',  marginLeft: '6px' }}>
+                                                <div className="char" style={{ display: 'inline-block' }}>U</div>
+                                                <div className="char" style={{ display: 'inline-block' }}>s</div>
+                                            </div>
+                                        </div>
                                     </h2>
+
 
 
                                 </div>
@@ -174,7 +225,7 @@ function Service() {
                             </div>
                         </div>
                     </section>
-                    <FooterSection  data={data}/>
+                    <FooterSection data={data} />
                 </div>
             </div>
             <div id="scroll-percentage"><span id="scroll-percentage-value"></span></div>

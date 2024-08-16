@@ -33,13 +33,96 @@ const AboutSection = () => {
                   About Our Company
                 </h4>
                 <h2
-                  className="section-title overflow-hidden custom-heading"
-                  data-text-animation
+                  className="section-title overflow-hidden active"
+                  data-text-animation=""
                   data-split="word"
                   data-duration="1"
+                  style={{ opacity: 1 }}
                 >
-                  We provide best web design <br />solution in city
+                  <div className="line" style={{ display: 'block', textAlign: 'start', width: '100%' }}>
+                    <div
+                      className="word"
+                      style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1 }}
+                    >
+                      <div className="char" style={{ display: 'inline-block' }}>W</div>
+                      <div className="char" style={{ display: 'inline-block' }}>e</div>
+                    </div>
+                    <div
+                      className="word"
+                      style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1, marginLeft: '5px' }}
+                    >
+                      <div className="char" style={{ display: 'inline-block' }}>p</div>
+                      <div className="char" style={{ display: 'inline-block' }}>r</div>
+                      <div className="char" style={{ display: 'inline-block' }}>o</div>
+                      <div className="char" style={{ display: 'inline-block' }}>v</div>
+                      <div className="char" style={{ display: 'inline-block' }}>i</div>
+                      <div className="char" style={{ display: 'inline-block' }}>d</div>
+                      <div className="char" style={{ display: 'inline-block' }}>e</div>
+                    </div>
+                    <div
+                      className="word"
+                      style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1, marginLeft: '5px' }}
+                    >
+                      <div className="char" style={{ display: 'inline-block' }}>b</div>
+                      <div className="char" style={{ display: 'inline-block' }}>e</div>
+                      <div className="char" style={{ display: 'inline-block' }}>s</div>
+                      <div className="char" style={{ display: 'inline-block' }}>t</div>
+                    </div>
+                    <div
+                      className="word"
+                      style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1, marginLeft: '5px' }}
+                    >
+                      <div className="char" style={{ display: 'inline-block' }}>w</div>
+                      <div className="char" style={{ display: 'inline-block' }}>e</div>
+                      <div className="char" style={{ display: 'inline-block' }}>b</div>
+                    </div>
+                    <div
+                      className="word"
+                      style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1, marginLeft: '5px' }}
+                    >
+                      <div className="char" style={{ display: 'inline-block' }}>d</div>
+                      <div className="char" style={{ display: 'inline-block' }}>e</div>
+                      <div className="char" style={{ display: 'inline-block' }}>s</div>
+                      <div className="char" style={{ display: 'inline-block' }}>i</div>
+                      <div className="char" style={{ display: 'inline-block' }}>g</div>
+                      <div className="char" style={{ display: 'inline-block' }}>n</div>
+                    </div>
+                  </div>
+
+                  <div className="line" style={{ display: 'block', textAlign: 'start', width: '100%', marginTop: '10px' }}>
+                    <div
+                      className="word"
+                      style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1 }}
+                    >
+                      <div className="char" style={{ display: 'inline-block' }}>s</div>
+                      <div className="char" style={{ display: 'inline-block' }}>o</div>
+                      <div className="char" style={{ display: 'inline-block' }}>l</div>
+                      <div className="char" style={{ display: 'inline-block' }}>u</div>
+                      <div className="char" style={{ display: 'inline-block' }}>t</div>
+                      <div className="char" style={{ display: 'inline-block' }}>i</div>
+                      <div className="char" style={{ display: 'inline-block' }}>o</div>
+                      <div className="char" style={{ display: 'inline-block' }}>n</div>
+                    </div>
+                    <div
+                      className="word"
+                      style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1, marginLeft: '5px' }}
+                    >
+                      <div className="char" style={{ display: 'inline-block' }}>i</div>
+                      <div className="char" style={{ display: 'inline-block' }}>n</div>
+                    </div>
+                    <div
+                      className="word"
+                      style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1, marginLeft: '5px' }}
+                    >
+                      <div className="char" style={{ display: 'inline-block' }}>c</div>
+                      <div className="char" style={{ display: 'inline-block' }}>i</div>
+                      <div className="char" style={{ display: 'inline-block' }}>t</div>
+                      <div className="char" style={{ display: 'inline-block' }}>y</div>
+                    </div>
+                  </div>
                 </h2>
+
+
                 <p>
                   Digital marketing is the act of promoting and selling products
                   and services by leveraging online marketing tactics such as

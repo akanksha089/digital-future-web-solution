@@ -67,8 +67,8 @@ const TestimonialSection = () => {
         }
     }, [loading, data]);
 
-    if (loading) return <p>Loading testimonials...</p>;
-    if (error) return <p>Error loading testimonials: {error.message}</p>;
+    if (loading) return <p></p>;
+    if (error) return <p></p>;
 
     return (
         <section className="testimonial-section overflow-hidden">

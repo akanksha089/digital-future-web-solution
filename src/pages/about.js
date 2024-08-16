@@ -13,6 +13,9 @@ function About() {
     const [error, setError] = useState(null);
 
     useEffect(() => {
+
+
+
         const fetchData = async () => {
             try {
                 const response = await fetch('https://dfweb-v2.onrender.com/api/v1/api-settings');
@@ -43,21 +46,24 @@ function About() {
             }
         };
 
+
+
         fetchData(), testiFetchData();
     }, []);
 
     const default_meta_title = data && data.default_meta_title || '';
     const default_meta_description = data?.default_meta_description || '';
-    const default_meta_keyword = data?.default_meta_keyword || '';   
+    const default_meta_keyword = data?.default_meta_keyword || '';
+
 
     return (
         <div className="body">
-             <Head>
-                    <title>{default_meta_title}</title>
-                    <meta name="description" content={default_meta_description} />
-                    <meta name="keyword" content={default_meta_keyword} />
-                </Head>
-            <Header/>
+            <Head>
+                <title>{default_meta_title}</title>
+                <meta name="description" content={default_meta_description} />
+                <meta name="keyword" content={default_meta_keyword} />
+            </Head>
+            <Header />
             <div id="popup-search-box">
                 <div className="box-inner-wrap d-flex align-items-center">
                     <form id="form" action="#" method="get" role="search">
@@ -88,7 +94,7 @@ function About() {
                         <div className="container">
                             <div className="page-header-content text-center">
                                 <h1 className="title">About Our Company</h1>
-                             
+
 
                                 <h4 className="sub-title"><Link className="home" href="/">Home </Link><span></span><Link className="inner-page" href="/about"> About Us</Link></h4>
                             </div>
@@ -117,9 +123,92 @@ function About() {
                                             <h4 className="sub-heading after-none " data-text-animation="fade-in" data-duration="1.5">
                                                 About Our Company
                                             </h4>
-                                            <h2 className="section-title custom-heading" data-text-animation data-split="word" data-duration="1">
-                                                We design and develop outstanding Digital Products and digital-first Brands.
+                                            <h2
+                                                className="section-title active"
+                                                data-text-animation=""
+                                                data-split="word"
+                                                data-duration="1"
+                                                style={{ opacity: 1 }}
+                                            >
+                                                <div
+                                                    className="line"
+                                                    style={{ display: 'block', textAlign: 'start', width: '100%' }}
+                                                >
+                                                    <div
+                                                        className="word"
+                                                        style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1, marginLeft: '6px' }}
+                                                    >
+                                                        <div className="char" style={{ display: 'inline-block' }}>We</div>
+                                                    </div>
+                                                    <div
+                                                        className="word"
+                                                        style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1, marginLeft: '6px' }}
+                                                    >
+                                                        <div className="char" style={{ display: 'inline-block' }}>design</div>
+                                                        <div
+                                                            className="word"
+                                                            style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1, marginLeft: '6px' }}
+                                                        >
+                                                            <div className="char" style={{ display: 'inline-block' }}>and</div>
+                                                        </div>
+                                                        <div
+                                                            className="word"
+                                                            style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1, marginLeft: '6px' }}
+                                                        >
+                                                            <div className="char" style={{ display: 'inline-block' }}>develop</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    className="line"
+                                                    style={{ display: 'block', textAlign: 'start', width: '100%' }}
+                                                >
+                                                    <div
+                                                        className="word"
+                                                        style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1, marginLeft: '6px' }}
+                                                    >
+                                                        <div className="char" style={{ display: 'inline-block' }}>outstanding</div>
+                                                    </div>
+                                                    <div
+                                                        className="word"
+                                                        style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1, marginLeft: '6px' }}
+                                                    >
+                                                        <div className="char" style={{ display: 'inline-block' }}>Digital</div>
+                                                        <div
+                                                            className="word"
+                                                            style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1, marginLeft: '6px' }}
+                                                        >
+                                                            <div className="char" style={{ display: 'inline-block' }}>Products</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    className="line"
+                                                    style={{ display: 'block', textAlign: 'start', width: '100%' }}
+                                                >
+                                                    <div
+                                                        className="word"
+                                                        style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1, marginLeft: '6px' }}
+                                                    >
+                                                        <div className="char" style={{ display: 'inline-block' }}>and</div>
+                                                    </div>
+                                                    <div
+                                                        className="word"
+                                                        style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1, marginLeft: '6px' }}
+                                                    >
+                                                        <div className="char" style={{ display: 'inline-block' }}>digital-</div>
+                                                        <div className="char" style={{ display: 'inline-block' }}>first</div>
+                                                    </div>
+                                                    <div
+                                                        className="word"
+                                                        style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1, marginLeft: '6px' }}
+                                                    >
+                                                        <div className="char" style={{ display: 'inline-block' }}>Brands.</div>
+                                                    </div>
+                                                </div>
                                             </h2>
+
+
                                             <p>
                                                 Platea vehicula rutrum curae magna taciti acut malesuada inceptos phasellus massa, eget ultrices tempor lacinia dictumst tincidunt leo mollis luctus varius gravida eleifend cursus litora consequat...
                                             </p>
@@ -157,9 +246,82 @@ function About() {
                                 <h4 className="sub-heading" data-text-animation="fade-in" data-duration="1.5">
                                     Work Process
                                 </h4>
-                                <h2 className="section-title custom-heading" data-text-animation data-split="word" data-duration="1">
-                                    Quality Service For Growth <br />Your Branding Identity
+                                <h2
+                                    className="section-title active"
+                                    data-text-animation=""
+                                    data-split="word"
+                                    data-duration="1"
+                                    style={{ opacity: 1 }}
+                                >
+                                    <div
+                                        className="line"
+                                        style={{ display: 'block', textAlign: 'center', width: '100%' }}
+                                    >
+                                        <div className="word" style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1, marginLeft: '6px' }}>
+                                            <span className="char" style={{ display: 'inline-block' }}>Q</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>u</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>a</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>l</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>i</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>t</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>y</span>
+                                        </div>
+                                        <div className="word" style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1, marginLeft: '6px' }}>
+                                            <span className="char" style={{ display: 'inline-block' }}>S</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>e</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>r</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>v</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>i</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>c</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>e</span>
+                                        </div>
+                                        <div className="word" style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1, marginLeft: '6px' }}>
+                                            <span className="char" style={{ display: 'inline-block' }}>F</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>o</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>r</span>
+                                        </div>
+                                        <div className="word" style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1, marginLeft: '6px' }}>
+                                            <span className="char" style={{ display: 'inline-block' }}>G</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>r</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>o</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>w</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>t</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>h</span>
+                                        </div>
+                                    </div>
+                                    <div
+                                        className="line"
+                                        style={{ display: 'block', textAlign: 'center', width: '100%' }}
+                                    >
+                                        <div className="word" style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1, marginLeft: '6px' }}>
+                                            <span className="char" style={{ display: 'inline-block' }}>Y</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>o</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>u</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>r</span>
+                                        </div>
+                                        <div className="word" style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1, marginLeft: '6px' }}>
+                                            <span className="char" style={{ display: 'inline-block' }}>B</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>r</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>a</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>n</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>d</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>i</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>n</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>g</span>
+                                        </div>
+                                        <div className="word" style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1, marginLeft: '6px' }}>
+                                            <span className="char" style={{ display: 'inline-block' }}>I</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>d</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>e</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>n</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>t</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>i</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>t</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>y</span>
+                                        </div>
+                                    </div>
                                 </h2>
+
                             </div>
                             <div className="row gy-lg-0 gy-4">
                                 <div className="col-lg-4 col-md-6">
@@ -262,13 +424,83 @@ function About() {
                                                 About Company
                                             </h4>
                                             <h2
-                                                className="section-title custom-heading"
-                                                data-text-animation
+                                                className="section-title active"
+                                                data-text-animation=""
                                                 data-split="word"
                                                 data-duration="1"
+                                                style={{ opacity: 1 }}
                                             >
-                                                Our Main Goal to Satisfy Local & Global Clients
+                                                <div
+                                                    className="line"
+                                                    style={{ display: 'block', textAlign: 'start', width: '100%' }}
+                                                >
+                                                    <div className="word" style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1, marginLeft: '6px' }}>
+                                                        <span className="char" style={{ display: 'inline-block' }}>O</span>
+                                                        <span className="char" style={{ display: 'inline-block' }}>u</span>
+                                                        <span className="char" style={{ display: 'inline-block' }}>r</span>
+                                                    </div>
+                                                    <div className="word" style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1, marginLeft: '6px' }}>
+                                                        <span className="char" style={{ display: 'inline-block' }}>M</span>
+                                                        <span className="char" style={{ display: 'inline-block' }}>a</span>
+                                                        <span className="char" style={{ display: 'inline-block' }}>i</span>
+                                                        <span className="char" style={{ display: 'inline-block' }}>n</span>
+                                                    </div>
+                                                    <div className="word" style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1, marginLeft: '6px' }}>
+                                                        <span className="char" style={{ display: 'inline-block' }}>G</span>
+                                                        <span className="char" style={{ display: 'inline-block' }}>o</span>
+                                                        <span className="char" style={{ display: 'inline-block' }}>a</span>
+                                                        <span className="char" style={{ display: 'inline-block' }}>l</span>
+                                                    </div>
+                                                    <div className="word" style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1, marginLeft: '6px' }}>
+                                                        <span className="char" style={{ display: 'inline-block' }}>t</span>
+                                                        <span className="char" style={{ display: 'inline-block' }}>o</span>
+                                                    </div>
+                                                    <div className="word" style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1, marginLeft: '6px' }}>
+                                                        <span className="char" style={{ display: 'inline-block' }}>S</span>
+                                                        <span className="char" style={{ display: 'inline-block' }}>a</span>
+                                                        <span className="char" style={{ display: 'inline-block' }}>t</span>
+                                                        <span className="char" style={{ display: 'inline-block' }}>i</span>
+                                                        <span className="char" style={{ display: 'inline-block' }}>s</span>
+                                                        <span className="char" style={{ display: 'inline-block' }}>f</span>
+                                                        <span className="char" style={{ display: 'inline-block' }}>i</span>
+                                                        <span className="char" style={{ display: 'inline-block' }}>e</span>
+                                                        <span className="char" style={{ display: 'inline-block' }}>d</span>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    className="line"
+                                                    style={{ display: 'block', textAlign: 'start', width: '100%' }}
+                                                >
+                                                    <div className="word" style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1, marginLeft: '6px' }}>
+                                                        <span className="char" style={{ display: 'inline-block' }}>l</span>
+                                                        <span className="char" style={{ display: 'inline-block' }}>o</span>
+                                                        <span className="char" style={{ display: 'inline-block' }}>c</span>
+                                                        <span className="char" style={{ display: 'inline-block' }}>a</span>
+                                                        <span className="char" style={{ display: 'inline-block' }}>l</span>
+                                                    </div>
+                                                    <div className="word" style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1, marginLeft: '6px' }}>
+                                                        <span className="char" style={{ display: 'inline-block' }}>&amp;</span>
+                                                    </div>
+                                                    <div className="word" style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1, marginLeft: '6px' }}>
+                                                        <span className="char" style={{ display: 'inline-block' }}>G</span>
+                                                        <span className="char" style={{ display: 'inline-block' }}>l</span>
+                                                        <span className="char" style={{ display: 'inline-block' }}>o</span>
+                                                        <span className="char" style={{ display: 'inline-block' }}>b</span>
+                                                        <span className="char" style={{ display: 'inline-block' }}>a</span>
+                                                        <span className="char" style={{ display: 'inline-block' }}>l</span>
+                                                    </div>
+                                                    <div className="word" style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1, marginLeft: '6px' }}>
+                                                        <span className="char" style={{ display: 'inline-block' }}>C</span>
+                                                        <span className="char" style={{ display: 'inline-block' }}>l</span>
+                                                        <span className="char" style={{ display: 'inline-block' }}>i</span>
+                                                        <span className="char" style={{ display: 'inline-block' }}>e</span>
+                                                        <span className="char" style={{ display: 'inline-block' }}>n</span>
+                                                        <span className="char" style={{ display: 'inline-block' }}>t</span>
+                                                        <span className="char" style={{ display: 'inline-block' }}>s</span>
+                                                    </div>
+                                                </div>
                                             </h2>
+
                                         </div>
                                         <div className="about-tab">
                                             <nav>
@@ -394,13 +626,78 @@ function About() {
                                     Team Members
                                 </h4>
                                 <h2
-                                    className="section-title custom-heading"
-                                    data-text-animation
+                                    className="section-title active"
+                                    data-text-animation=""
                                     data-split="word"
                                     data-duration="1"
+                                    style={{ opacity: 1 }}
                                 >
-                                    Our Expert Team Would Like <br /> To Hear From You!
+                                    <div
+                                        className="line"
+                                        style={{ display: 'block', textAlign: 'center', width: '100%' }}
+                                    >
+                                        <div className="word" style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1, marginLeft: '6px' }}>
+                                            <span className="char" style={{ display: 'inline-block' }}>O</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>u</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>r</span>
+                                        </div>
+                                        <div className="word" style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1, marginLeft: '6px' }}>
+                                            <span className="char" style={{ display: 'inline-block' }}>E</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>x</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>p</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>e</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>r</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>t</span>
+                                        </div>
+                                        <div className="word" style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1, marginLeft: '6px' }}>
+                                            <span className="char" style={{ display: 'inline-block' }}>T</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>e</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>a</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>m</span>
+                                        </div>
+                                        <div className="word" style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1, marginLeft: '6px' }}>
+                                            <span className="char" style={{ display: 'inline-block' }}>W</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>o</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>u</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>l</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>d</span>
+                                        </div>
+                                        <div className="word" style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1, marginLeft: '6px' }}>
+                                            <span className="char" style={{ display: 'inline-block' }}>L</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>i</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>k</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>e</span>
+                                        </div>
+                                    </div>
+                                    <div
+                                        className="line"
+                                        style={{ display: 'block', textAlign: 'center', width: '100%' }}
+                                    >
+                                        <div className="word" style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1, marginLeft: '6px' }}>
+                                            <span className="char" style={{ display: 'inline-block' }}>T</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>o</span>
+                                        </div>
+                                        <div className="word" style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1, marginLeft: '6px' }}>
+                                            <span className="char" style={{ display: 'inline-block' }}>H</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>e</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>a</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>r</span>
+                                        </div>
+                                        <div className="word" style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1, marginLeft: '6px' }}>
+                                            <span className="char" style={{ display: 'inline-block' }}>F</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>r</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>o</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>m</span>
+                                        </div>
+                                        <div className="word" style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1, marginLeft: '6px' }}>
+                                            <span className="char" style={{ display: 'inline-block' }}>Y</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>o</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>u</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>!</span>
+                                        </div>
+                                    </div>
                                 </h2>
+
                             </div>
                             <div className="row gy-lg-0 gy-5">
                                 <div className="col-lg-3 col-md-6">
@@ -520,40 +817,70 @@ function About() {
                                 >
                                     Testimonials
                                 </h4>
+                               
                                 <h2
-                                    className="section-title custom-heading"
-                                    data-text-animation
+                                    className="section-title active"
+                                    data-text-animation=""
                                     data-split="word"
                                     data-duration="1"
+                                    style={{ opacity: 1 }}
                                 >
-                                    Clients feedback
-                                </h2>
-                            </div>
-                            <div className="row  gy-lg-0 gy-4 testi-wrap justify-content-center">
-                            {testiData && testiData.blogs && testiData.blogs.length > 0 ? (
-                            testiData.blogs.map((item, index) => (
-                                <div key={index}  className="col-lg-4 col-md-6 single-testimonial">
-                                    <div className="testi-item item-3 text-center fade-top">
-                                        <div className="testi-thumb">
-                                            <img src={item.image} alt="img" />
+                                    <div
+                                        className="line"
+                                        style={{ display: 'block', textAlign: 'center', width: '100%' }}
+                                    >
+                                        <div
+                                            className="word"
+                                             style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1, marginLeft: '6px' }}
+                                        >
+                                            <span className="char" style={{ display: 'inline-block' }}>C</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>l</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>i</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>e</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>n</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>t</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>s</span>
                                         </div>
-                                        <div className="testi-content">
-                                            <h3 className="author custom-heading">
-                                            {item.title} <span>{item.designation}</span>
-                                            </h3>
-                                            {item && item.description ? (
-                                                <p>{ReactHtmlParser(item.description)}</p>
-                                            ) : (
-                                                <p></p>
-                                            )}
-                                           
+                                        <div
+                                            className="word"
+                                             style={{ display: 'inline-block', transform: 'translate(0px, 0px)', opacity: 1, marginLeft: '6px' }}
+                                        >
+                                            <span className="char" style={{ display: 'inline-block' }}>f</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>e</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>e</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>d</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>b</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>a</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>c</span>
+                                            <span className="char" style={{ display: 'inline-block' }}>k</span>
                                         </div>
                                     </div>
-                                </div>
-                                 ))
-                                ) : (
-                                    ''
-                                )}
+                                </h2>
+
+                            </div>
+                            <div className="row  gy-lg-0 gy-4 testi-wrap justify-content-center">
+                                {testiData && testiData.blogs && testiData.blogs.length > 0 ? (
+                                    testiData.blogs.map((item, index) => (
+                                        <div key={index} className="col-lg-4 col-md-6 single-testimonial">
+                                            <div className="testi-item item-3 text-center fade-top">
+                                                <div className="testi-thumb">
+                                                    <img src={item.image} alt="img" />
+                                                </div>
+                                                <div className="testi-content">
+                                                    <h3 className="author custom-heading">
+                                                        {item.title} <span>{item.designation}</span>
+                                                    </h3>
+                                                    {item.description ? (
+                                                        <div>{ReactHtmlParser(item.description)}</div>
+                                                    ) : (
+                                                        <p>   </p>
+                                                    )}
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ))
+                                ) : ""}
                                 {/* <div className="col-lg-4 col-md-6">
                                     <div className="testi-item item-3 text-center fade-top">
                                         <div className="testi-thumb">
@@ -592,7 +919,7 @@ function About() {
             </div>
             <div id="scroll-percentage"><span id="scroll-percentage-value"></span></div>
 
-            
+
         </div>
     )
 }

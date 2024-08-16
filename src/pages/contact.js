@@ -24,18 +24,18 @@ function Contact() {
                 setLoading(false);
             }
         };
-  fetchSettingData(); 
+        fetchSettingData();
     }, []);
     const default_meta_title = settingdata && settingdata.default_meta_title || '';
     const default_meta_description = settingdata?.default_meta_description || '';
-    const default_meta_keyword = settingdata?.default_meta_keyword || '';    
+    const default_meta_keyword = settingdata?.default_meta_keyword || '';
     return (
         <div className="body">
             <Head>
-                    <title>{default_meta_title}</title>
-                    <meta name="description" content={default_meta_description} />
-                    <meta name="keyword" content={default_meta_keyword} />
-                </Head>
+                <title>{default_meta_title}</title>
+                <meta name="description" content={default_meta_description} />
+                <meta name="keyword" content={default_meta_keyword} />
+            </Head>
             <Header />
             <div id="popup-search-box">
                 <div className="box-inner-wrap d-flex align-items-center">
@@ -52,7 +52,7 @@ function Contact() {
                     </div>
                 </div>
             </div>
-            <Sidebar data={settingdata}/>
+            <Sidebar data={settingdata} />
             {/* <div id="preloader">
             <div className="loading" data-loading-text="Runok"></div>
         </div> */}
@@ -100,13 +100,42 @@ function Contact() {
                                                 Contact Us
                                             </h4>
                                             <h2
-                                                className="section-title custom-heading"
-                                                data-text-animation
+                                                className="section-title active"
+                                                data-text-animation=""
                                                 data-split="word"
                                                 data-duration="1"
+                                                style={{ opacity: 1 }}
                                             >
-                                                Let working together
+                                                <div className="line" style={{ display: 'block', textAlign: 'start', width: '100%' }}>
+                                                    <div className="word" style={{ display: 'inline-block', translate: 'none', rotate: 'none', scale: 'none', opacity: 1, transform: 'translate(0px, 0px)' ,  marginLeft: '6px' }}>
+                                                        <div className="char" style={{ display: 'inline-block' }}>L</div>
+                                                        <div className="char" style={{ display: 'inline-block' }}>e</div>
+                                                        <div className="char" style={{ display: 'inline-block' }}>t</div>
+                                                        <div className="char" style={{ display: 'inline-block' }}>’</div>
+                                                        <div className="char" style={{ display: 'inline-block' }}>s</div>
+                                                    </div>
+                                                    <div className="word" style={{ display: 'inline-block', translate: 'none', rotate: 'none', scale: 'none', opacity: 1, transform: 'translate(0px, 0px)',  marginLeft: '6px' }}>
+                                                        <div className="char" style={{ display: 'inline-block' }}>w</div>
+                                                        <div className="char" style={{ display: 'inline-block' }}>o</div>
+                                                        <div className="char" style={{ display: 'inline-block' }}>r</div>
+                                                        <div className="char" style={{ display: 'inline-block' }}>k</div>
+                                                        <div className="char" style={{ display: 'inline-block' }}>i</div>
+                                                        <div className="char" style={{ display: 'inline-block' }}>n</div>
+                                                        <div className="char" style={{ display: 'inline-block' }}>g</div>
+                                                    </div>
+                                                    <div className="word" style={{ display: 'inline-block', translate: 'none', rotate: 'none', scale: 'none', opacity: 1, transform: 'translate(0px, 0px)',  marginLeft: '6px' }}>
+                                                        <div className="char" style={{ display: 'inline-block' }}>t</div>
+                                                        <div className="char" style={{ display: 'inline-block' }}>o</div>
+                                                        <div className="char" style={{ display: 'inline-block' }}>g</div>
+                                                        <div className="char" style={{ display: 'inline-block' }}>e</div>
+                                                        <div className="char" style={{ display: 'inline-block' }}>t</div>
+                                                        <div className="char" style={{ display: 'inline-block' }}>h</div>
+                                                        <div className="char" style={{ display: 'inline-block' }}>e</div>
+                                                        <div className="char" style={{ display: 'inline-block' }}>r</div>
+                                                    </div>
+                                                </div>
                                             </h2>
+
                                             <p>
                                                 Thank you for your interest in Attach Web Agency. We
                                                 excited to hear from you and discuss...
@@ -157,7 +186,7 @@ function Contact() {
                                 <div className="col-lg-7">
                                     <div className="blog-contact-form form-2">
                                         <div className="request-form">
-                                            <form 
+                                            <form
                                                 action="mail.php"
                                                 method="post"
                                                 id="ajax_contact"
@@ -166,25 +195,25 @@ function Contact() {
                                                 <div className="form-group row">
                                                     <div className="col-md-6">
                                                         <div className="form-item">
-                                                            <input 
+                                                            <input
                                                                 type="text"
                                                                 id="fullname"
                                                                 name="fullname"
                                                                 className="form-control"
                                                                 placeholder="Your Name"
-                                                                
+
                                                             />
                                                         </div>
                                                     </div>
                                                     <div className="col-md-6">
                                                         <div className="form-item">
-                                                            <input 
+                                                            <input
                                                                 type="text"
                                                                 id="lastname"
                                                                 name="lastname"
                                                                 className="form-control"
                                                                 placeholder="Last Name"
-                                                               
+
                                                             />
                                                         </div>
                                                     </div>
@@ -192,7 +221,7 @@ function Contact() {
                                                 <div className="form-group row">
                                                     <div className="col-md-6">
                                                         <div className="form-item">
-                                                            <input 
+                                                            <input
                                                                 type="text"
                                                                 id="email"
                                                                 name="email"
@@ -203,13 +232,13 @@ function Contact() {
                                                     </div>
                                                     <div className="col-md-6">
                                                         <div className="form-item">
-                                                            <input 
+                                                            <input
                                                                 type="text"
                                                                 id="phone"
                                                                 name="phone"
                                                                 className="form-control"
                                                                 placeholder="Phone number*"
-                                                               
+
                                                             />
                                                         </div>
                                                     </div>
@@ -253,12 +282,12 @@ function Contact() {
                                                                 rows="5"
                                                                 className="form-control address"
                                                                 placeholder="Message"
-                                                               
+
                                                             ></textarea>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div  className="submit-btn">
+                                                <div className="submit-btn">
                                                     <button id="submit" className="rr-primary-btn" type="submit">
                                                         Submit Message
                                                     </button>
@@ -282,12 +311,12 @@ function Contact() {
                             ></iframe>
                         </div>
                     </div>
-                    <FooterSection data={settingdata}/>
+                    <FooterSection data={settingdata} />
                 </div>
             </div>
             <div id="scroll-percentage"><span id="scroll-percentage-value"></span></div>
 
-       
+
 
         </div>
     )

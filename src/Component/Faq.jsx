@@ -52,13 +52,128 @@ const FAQSection = () => {
                     Just Ask us some question
                   </h4>
                   <h2
-                    className="section-title custom-heading"
-                    data-text-animation
+                    className="section-title active"
+                    data-text-animation=""
                     data-split="word"
                     data-duration="1"
+                    style={{ opacity: 1 }}
                   >
-                    Digital Solution That Improve Your Agency Growth
+                    <div className="line" style={{ display: 'block', textAlign: 'start', width: '100%' }}>
+                      <div
+                        className="word"
+                        style={{
+                          display: 'inline-block',
+                          transform: 'translate(0px, 0px)',
+                          opacity: 1,
+                        }}
+                      >
+                        <div className="char" style={{ display: 'inline-block' }}>D</div>
+                        <div className="char" style={{ display: 'inline-block' }}>i</div>
+                        <div className="char" style={{ display: 'inline-block' }}>g</div>
+                        <div className="char" style={{ display: 'inline-block' }}>i</div>
+                        <div className="char" style={{ display: 'inline-block' }}>t</div>
+                        <div className="char" style={{ display: 'inline-block' }}>a</div>
+                        <div className="char" style={{ display: 'inline-block' }}>l</div>
+                      </div>
+                      <div
+                        className="word"
+                        style={{
+                          display: 'inline-block',
+                          transform: 'translate(0px, 0px)',
+                          opacity: 1,
+                          marginLeft: '5px',
+                        }}
+                      >
+                        <div className="char" style={{ display: 'inline-block' }}>S</div>
+                        <div className="char" style={{ display: 'inline-block' }}>o</div>
+                        <div className="char" style={{ display: 'inline-block' }}>l</div>
+                        <div className="char" style={{ display: 'inline-block' }}>u</div>
+                        <div className="char" style={{ display: 'inline-block' }}>t</div>
+                        <div className="char" style={{ display: 'inline-block' }}>i</div>
+                        <div className="char" style={{ display: 'inline-block' }}>o</div>
+                        <div className="char" style={{ display: 'inline-block' }}>n</div>
+                      </div>
+                      <div
+                        className="word"
+                        style={{
+                          display: 'inline-block',
+                          transform: 'translate(0px, 0px)',
+                          opacity: 1,
+                          marginLeft: '5px',
+                        }}
+                      >
+                        <div className="char" style={{ display: 'inline-block' }}>T</div>
+                        <div className="char" style={{ display: 'inline-block' }}>h</div>
+                        <div className="char" style={{ display: 'inline-block' }}>a</div>
+                        <div className="char" style={{ display: 'inline-block' }}>t</div>
+                      </div>
+                      <div
+                        className="word"
+                        style={{
+                          display: 'inline-block',
+                          transform: 'translate(0px, 0px)',
+                          opacity: 1,
+                          marginLeft: '5px',
+                        }}
+                      >
+                        <div className="char" style={{ display: 'inline-block' }}>I</div>
+                        <div className="char" style={{ display: 'inline-block' }}>m</div>
+                        <div className="char" style={{ display: 'inline-block' }}>p</div>
+                        <div className="char" style={{ display: 'inline-block' }}>r</div>
+                        <div className="char" style={{ display: 'inline-block' }}>o</div>
+                        <div className="char" style={{ display: 'inline-block' }}>v</div>
+                        <div className="char" style={{ display: 'inline-block' }}>e</div>
+                      </div>
+                    </div>
+                    <div className="line" style={{ display: 'block', textAlign: 'start', width: '100%' }}>
+                      <div
+                        className="word"
+                        style={{
+                          display: 'inline-block',
+                          transform: 'translate(0px, 0px)',
+                          opacity: 1,
+                        }}
+                      >
+                        <div className="char" style={{ display: 'inline-block' }}>Y</div>
+                        <div className="char" style={{ display: 'inline-block' }}>o</div>
+                        <div className="char" style={{ display: 'inline-block' }}>u</div>
+                        <div className="char" style={{ display: 'inline-block' }}>r</div>
+                      </div>
+                      <div
+                        className="word"
+                        style={{
+                          display: 'inline-block',
+                          transform: 'translate(0px, 0px)',
+                          opacity: 1,
+                          marginLeft: '5px',
+                        }}
+                      >
+                        <div className="char" style={{ display: 'inline-block' }}>A</div>
+                        <div className="char" style={{ display: 'inline-block' }}>g</div>
+                        <div className="char" style={{ display: 'inline-block' }}>e</div>
+                        <div className="char" style={{ display: 'inline-block' }}>n</div>
+                        <div className="char" style={{ display: 'inline-block' }}>c</div>
+                        <div className="char" style={{ display: 'inline-block' }}>y</div>
+                      </div>
+                      <div
+                        className="word"
+                        style={{
+                          display: 'inline-block',
+                          transform: 'translate(0px, 0px)',
+                          opacity: 1,
+                          marginLeft: '5px',
+                        }}
+                      >
+                        <div className="char" style={{ display: 'inline-block' }}>G</div>
+                        <div className="char" style={{ display: 'inline-block' }}>r</div>
+                        <div className="char" style={{ display: 'inline-block' }}>o</div>
+                        <div className="char" style={{ display: 'inline-block' }}>w</div>
+                        <div className="char" style={{ display: 'inline-block' }}>t</div>
+                        <div className="char" style={{ display: 'inline-block' }}>h</div>
+                      </div>
+                    </div>
                   </h2>
+
                 </div>
                 <div className="accordion" id="accordionExampleTwo">
                   {data && data.blogs && data.blogs.length > 0 ? (
