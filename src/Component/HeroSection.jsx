@@ -52,7 +52,7 @@ const HeroSection = () => {
       <div className="container">
         <div className="hero-content">
           {/* <h4 className="sub-title anim-text custom-heading">Transforming</h4> */}
-          <h4 className="sub-title anim-text custom-heading">
+          <h4 className="sub-title anim-text custom-heading active">
             <div className="line" style={{ display: 'block', textAlign: 'start', width: '100%' }}>
               <div className="char" style={{ display: 'inline-block', transform: 'translate(0px, 0%)' }}>T</div>
               <div className="char" style={{ display: 'inline-block', transform: 'translate(0px, 0%)' }}>r</div>
@@ -69,7 +69,7 @@ const HeroSection = () => {
             </div>
           </h4>
 
-          <h2 className="title anim-text">
+          <h2 className="title anim-text active">
             <div className="line" style={{ display: 'block', textAlign: 'start', width: '100%' }}>
               <div className="char" style={{ display: 'inline-block', translate: 'none', rotate: 'none', scale: 'none', transform: 'translate(0px, 0%)' }}>V</div>
               <div className="char" style={{ display: 'inline-block', translate: 'none', rotate: 'none', scale: 'none', transform: 'translate(0px, 0%)' }}>i</div>
@@ -77,7 +77,7 @@ const HeroSection = () => {
               <div className="char" style={{ display: 'inline-block', translate: 'none', rotate: 'none', scale: 'none', transform: 'translate(0px, 0%)' }}>i</div>
               <div className="char" style={{ display: 'inline-block', translate: 'none', rotate: 'none', scale: 'none', transform: 'translate(0px, 0%)' }}>o</div>
               <div className="char" style={{ display: 'inline-block', translate: 'none', rotate: 'none', scale: 'none', transform: 'translate(0px, 0%)' }}>n</div>
-              <div className="char" style={{ display: 'inline-block', translate: 'none', rotate: 'none', scale: 'none', transform: 'translate(0px, 0%)' }}>s</div>
+              <div className="char" style={{ display: 'inline-block', translate: 'none', rotate: 'none', scale: 'none', transform: 'translate(0px, 0%)', marginRight: '6px' }}>s</div>
               <div className="char" style={{ display: 'inline-block', translate: 'none', rotate: 'none', scale: 'none', transform: 'translate(0px, 0%)' }}>i</div>
               <div className="char" style={{ display: 'inline-block', translate: 'none', rotate: 'none', scale: 'none', transform: 'translate(0px, 0%)' }}>n</div>
               <div className="char" style={{ display: 'inline-block', translate: 'none', rotate: 'none', scale: 'none', transform: 'translate(0px, 0%)' }}>t</div>
@@ -85,7 +85,25 @@ const HeroSection = () => {
             </div>
           </h2>
 
-          <h3 className="bottom-title anim-text custom-heading ">Digital Reality</h3>
+          <h3 className="bottom-title anim-text custom-heading active">
+            <div className="line" style={{ display: 'block', textAlign: 'start', width: '100%' }}>
+              <div className="char" style={{ display: 'inline-block', translate: 'none', rotate: 'none', scale: 'none', transform: 'translate(0px, 0%)' }}>D</div>
+              <div className="char" style={{ display: 'inline-block', translate: 'none', rotate: 'none', scale: 'none', transform: 'translate(0px, 0%)' }}>i</div>
+              <div className="char" style={{ display: 'inline-block', translate: 'none', rotate: 'none', scale: 'none', transform: 'translate(0px, 0%)' }}>g</div>
+              <div className="char" style={{ display: 'inline-block', translate: 'none', rotate: 'none', scale: 'none', transform: 'translate(0px, 0%)' }}>i</div>
+              <div className="char" style={{ display: 'inline-block', translate: 'none', rotate: 'none', scale: 'none', transform: 'translate(0px, 0%)' }}>t</div>
+              <div className="char" style={{ display: 'inline-block', translate: 'none', rotate: 'none', scale: 'none', transform: 'translate(0px, 0%)' }}>a</div>
+              <div className="char" style={{ display: 'inline-block', translate: 'none', rotate: 'none', scale: 'none', transform: 'translate(0px, 0%)', marginRight:'6px' }}>l</div>
+              <div className="char" style={{ display: 'inline-block', translate: 'none', rotate: 'none', scale: 'none', transform: 'translate(0px, 0%)' }}>R</div>
+              <div className="char" style={{ display: 'inline-block', translate: 'none', rotate: 'none', scale: 'none', transform: 'translate(0px, 0%)' }}>e</div>
+              <div className="char" style={{ display: 'inline-block', translate: 'none', rotate: 'none', scale: 'none', transform: 'translate(0px, 0%)' }}>a</div>
+              <div className="char" style={{ display: 'inline-block', translate: 'none', rotate: 'none', scale: 'none', transform: 'translate(0px, 0%)' }}>l</div>
+              <div className="char" style={{ display: 'inline-block', translate: 'none', rotate: 'none', scale: 'none', transform: 'translate(0px, 0%)' }}>i</div>
+              <div className="char" style={{ display: 'inline-block', translate: 'none', rotate: 'none', scale: 'none', transform: 'translate(0px, 0%)' }}>t</div>
+              <div className="char" style={{ display: 'inline-block', translate: 'none', rotate: 'none', scale: 'none', transform: 'translate(0px, 0%)' }}>y</div>
+            </div>
+          </h3>
+
           <Link href="/about" className="hero-btn">
             <i className="fa-thin fa-arrow-right"></i>
           </Link>
